@@ -1,0 +1,322 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1
+valu
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1552506076
+!i10b 1
+!s100 7gjL^D_`36K;Q<b^?Na`K0
+IEjhZn=gGa:71H9aLa3Kz>3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 cpu_datapath_sv_unit
+S1
+R0
+Z5 w1550841212
+Z6 8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_datapath.sv
+Z7 FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_datapath.sv
+L0 242
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1552506075.000000
+Z10 !s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_datapath.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_datapath.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+valu_mux
+R1
+R2
+!i10b 1
+!s100 6ODUh7zZ3gYSfHzC8QG>S0
+ImSzA?I>3Ban3[MS1`C3Y21
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 170
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vcpu
+R1
+Z14 !s110 1552506074
+!i10b 1
+!s100 VodFnHAn=Tc@H8<kFo9=N0
+IB@`];V1ZjjE2iF4gY^fH?2
+R3
+!s105 cpu_sv_unit
+S1
+R0
+w1550782664
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z15 !s108 1552506074.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu.sv|
+!i113 1
+R12
+R13
+vcpu_controlpath
+R1
+!s110 1552506075
+!i10b 1
+!s100 jghdWNaheLn_D>ZYgSazf2
+IE?:5YLgJ?zjgZe6@I<98C2
+R3
+!s105 cpu_controlpath_sv_unit
+S1
+R0
+w1550781812
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_controlpath.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_controlpath.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_controlpath.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_controlpath.sv|
+!i113 1
+R12
+R13
+vcpu_datapath
+R1
+R2
+!i10b 1
+!s100 4cVbKje9:_eRjeOB:fJZR3
+IC;j3`1BgRMGccQ[PmgFCW3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vde1soc_top
+R1
+!s110 1552506155
+!i10b 1
+!s100 5]BD]`=NWaPV<gWQ57inL1
+Ij^ZW[=b1?Il8OO]HKifP73
+R3
+!s105 de1soc_top_sv_unit
+S1
+R0
+w1552506149
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/de1soc_top.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/de1soc_top.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1552506155.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/de1soc_top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/de1soc_top.sv|
+!i113 1
+R12
+R13
+vmem4k
+R1
+!s110 1552506077
+!i10b 1
+!s100 =PUAee9Xh5iN;=RcPOO^F0
+Izi`GAQNXR<Y>Kk<bY?Jib1
+R3
+!s105 mem4k_sv_unit
+S1
+R0
+w1552362310
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem4k.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem4k.sv
+L0 5
+R8
+r1
+!s85 0
+31
+!s108 1552506077.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem4k.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem4k.sv|
+!i113 1
+R12
+R13
+vmem_logic
+R1
+!s110 1552506217
+!i10b 1
+!s100 ^8_GGk3ooLHIUHSJcjON@1
+I=jUG<KaHQGX^156Q7He2M0
+R3
+!s105 mem_logic_sv_unit
+S1
+R0
+w1552506211
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem_logic.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem_logic.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1552506217.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem_logic.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem_logic.sv|
+!i113 1
+R12
+R13
+vmem_mux
+R1
+R2
+!i10b 1
+!s100 lFfb8[84zFDK:4NDTkRZk2
+If0mPU4VDl[h<BZCkFOV`33
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 154
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vnz_reg
+R1
+R2
+!i10b 1
+!s100 gD=zELCnbo;5]<F9@<4mf0
+IT5Tig1T9_1C;zjLG5[:Hc2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 217
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vpc_reg
+R1
+R2
+!i10b 1
+!s100 eVNg:ZcE:HJ?Yo8FOX;5M1
+Ic1aU7Vee8D3OfzCQ<c]VQ2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 185
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vreg_var
+R1
+R14
+!i10b 1
+!s100 5;N5Yna5QORHS;6CFjUfo1
+IflTKkNkSR_4;DhPMUQd782
+R3
+!s105 reg_var_sv_unit
+S1
+R0
+w1548535502
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/reg_var.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/reg_var.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/reg_var.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/reg_var.sv|
+!i113 1
+R12
+R13
+vregs
+R1
+R2
+!i10b 1
+!s100 UBSamBkW]cJ3I=V_48i1n3
+IlI4BX^?5jc4c2IBfdPEiD1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 111
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13

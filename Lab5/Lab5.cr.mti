@@ -1,0 +1,15 @@
+C:/Users/Charles/Desktop/ECE342_Labs/Lab5/cpu_controlpath.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab5/cpu_controlpath.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cpu_controlpath
+
+Top level modules:
+	cpu_controlpath
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab5/cpu.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab5/cpu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}}

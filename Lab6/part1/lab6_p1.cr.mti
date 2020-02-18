@@ -1,0 +1,56 @@
+C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_controlpath.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_controlpath.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cpu_controlpath
+
+Top level modules:
+	cpu_controlpath
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/de1soc_top.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/de1soc_top.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module de1soc_top
+
+Top level modules:
+	de1soc_top
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/reg_var.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/reg_var.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module reg_var
+
+Top level modules:
+	reg_var
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_datapath.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu_datapath.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cpu_datapath
+-- Compiling module regs
+-- Compiling module mem_mux
+-- Compiling module alu_mux
+-- Compiling module pc_reg
+-- Compiling module nz_reg
+-- Compiling module alu
+
+Top level modules:
+	cpu_datapath
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem4k.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem4k.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mem4k
+
+Top level modules:
+	mem4k
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/cpu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem_logic.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab6/part1/mem_logic.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mem_logic
+
+Top level modules:
+	mem_logic
+
+} {} {}}
