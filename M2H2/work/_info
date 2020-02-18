@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Chao Desktop/AAC2/M2H1
+Eaac2m2h2_tb
+Z0 w1573360174
+Z1 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z2 DPx4 ieee 20 numeric_bit_unsigned 0 22 Uo=_FXbo@j4IMIikZfQ=:3
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 dD:/Chao Desktop/AAC2/M2H2
+Z7 8D:/Chao Desktop/AAC2/M2H2/AAC2M2H2_tb.vhdp
+Z8 FD:/Chao Desktop/AAC2/M2H2/AAC2M2H2_tb.vhdp
+l0
+L50
+VaTdZ=1bCI7W=M1W>:C=CC0
+!s100 beO@c39B]_]0E@4d3EKgB1
+Z9 OV;C;10.5b;63
+32
+!s110 1579018291
+!i10b 1
+Z10 !s108 1579018291.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Chao Desktop/AAC2/M2H2/AAC2M2H2_tb.vhdp|
+Z12 !s107 D:/Chao Desktop/AAC2/M2H2/AAC2M2H2_tb.vhdp|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+R4
+R5
+DEx4 work 11 aac2m2h2_tb 0 22 aTdZ=1bCI7W=M1W>:C=CC0
+l140
+L58
+VimiA:dCPWGS_Ke9OiLlEo2
+!s100 09k9jnFm]SWMjcFWigmWY2
+R9
+32
+!s110 1579018292
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Efifo8x9
+Z15 w1579018675
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z17 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R5
+R6
+Z18 8D:/Chao Desktop/AAC2/M2H2/AAC2M2H2.vhd
+Z19 FD:/Chao Desktop/AAC2/M2H2/AAC2M2H2.vhd
+l0
+L6
+VhX78GJZ0ZCjN]@5QMD1=Q1
+!s100 Pdnf3:EM[P4LTLRO8Qj4l1
+R9
+33
+Z20 !s110 1579018682
+!i10b 1
+Z21 !s108 1579018682.000000
+Z22 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|D:/Chao Desktop/AAC2/M2H2/AAC2M2H2.vhd|
+Z23 !s107 D:/Chao Desktop/AAC2/M2H2/AAC2M2H2.vhd|
+!i113 1
+Z24 o-work work -2008 -explicit
+R14
+Artl
+R16
+R17
+R3
+R4
+R5
+DEx4 work 7 fifo8x9 0 22 hX78GJZ0ZCjN]@5QMD1=Q1
+l25
+L17
+VP^Zmzi;K^NFHU7R6zRDzn3
+!s100 0kgH]BCWoSQa;?bTH_0Nc1
+R9
+33
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R24
+R14

@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Quartus_Prime_Lite_18.0.0.614
+Eaac2m1p1_tb
+Z0 w1573323670
+Z1 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/Charles/Desktop/AAC2M1P1
+Z6 8C:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1_tb.vhdp
+Z7 FC:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1_tb.vhdp
+l0
+L52
+VJYg2NG8BnOlP:Ta[BeaT?1
+!s100 o_c;zO@o9]4[Q2AMzCkSz0
+Z8 OV;C;10.5b;63
+32
+!s110 1578328943
+!i10b 1
+Z9 !s108 1578328942.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1_tb.vhdp|
+Z11 !s107 C:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1_tb.vhdp|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+R4
+DEx4 work 11 aac2m1p1_tb 0 22 JYg2NG8BnOlP:Ta[BeaT?1
+l135
+L61
+V>iilV:A51nag`Z_>Y>kiE1
+!s100 ?ej_`=]L:bNOQO]:gTi5H0
+R8
+32
+!s110 1578328944
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecomparator2
+Z14 w1578328671
+R3
+R4
+R5
+Z15 8C:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1.vhd
+Z16 FC:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1.vhd
+l0
+L40
+V7>K<a7594hM0oK[<N>PMc1
+!s100 jbXW<kjD[_>^?bUXljbbi2
+R8
+32
+Z17 !s110 1578328923
+!i10b 1
+Z18 !s108 1578328922.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1.vhd|
+Z20 !s107 C:/Users/Charles/Desktop/AAC2M1P1/AAC2M1P1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 11 comparator2 0 22 7>K<a7594hM0oK[<N>PMc1
+l46
+L45
+V5dddkl:G431@b3RA54f`53
+!s100 MSF<U5EbU9i_XPn04dKPG2
+R8
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
