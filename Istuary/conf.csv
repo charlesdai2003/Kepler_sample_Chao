@@ -1,0 +1,517 @@
+Register/Table,Field,Description,Width,Number of entries,Field start bit,Start address,End address
+Core Version,,,32,1,,0,0
+,version,Version of the core,32,,0,,
+Buffer Free,,,11,1,,1,1
+,cells,Number of free cells,11,,0,,
+Packet counter latch,,,1,1,,2,2
+,enable,When set to one the packet counter registers will be syncronously updated. The enable bit is then cleared.,1,,0,,
+Drain Port,,,5,1,,3,3
+,drainPort,The egress port to be drained. Only valid if drainEnable is set,4,,0,,
+,drainEnable,"If set, drain queue is enabled",1,,4,,
+Drain Port Drop,,,32,12,,4,15
+,packets,The number of dropped packets,32,,0,,
+Packet Length Reference: RX 0,,,24,1,,16,16
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 0,,,24,1,,17,17
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 0,,,24,1,,18,18
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 0,,,24,1,,19,19
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 0,,,24,1,,20,20
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 0,,,24,1,,21,21
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 1,,,24,1,,22,22
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 1,,,24,1,,23,23
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 1,,,24,1,,24,24
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 1,,,24,1,,25,25
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 1,,,24,1,,26,26
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 1,,,24,1,,27,27
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 2,,,24,1,,28,28
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 2,,,24,1,,29,29
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 2,,,24,1,,30,30
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 2,,,24,1,,31,31
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 2,,,24,1,,32,32
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 2,,,24,1,,33,33
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 3,,,24,1,,34,34
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 3,,,24,1,,35,35
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 3,,,24,1,,36,36
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 3,,,24,1,,37,37
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 3,,,24,1,,38,38
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 3,,,24,1,,39,39
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 4,,,24,1,,40,40
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 4,,,24,1,,41,41
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 4,,,24,1,,42,42
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 4,,,24,1,,43,43
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 4,,,24,1,,44,44
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 4,,,24,1,,45,45
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 5,,,24,1,,46,46
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 5,,,24,1,,47,47
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 5,,,24,1,,48,48
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 5,,,24,1,,49,49
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 5,,,24,1,,50,50
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 5,,,24,1,,51,51
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 6,,,24,1,,52,52
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 6,,,24,1,,53,53
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 6,,,24,1,,54,54
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 6,,,24,1,,55,55
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 6,,,24,1,,56,56
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 6,,,24,1,,57,57
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 7,,,24,1,,58,58
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 7,,,24,1,,59,59
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 7,,,24,1,,60,60
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 7,,,24,1,,61,61
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 7,,,24,1,,62,62
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 7,,,24,1,,63,63
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 8,,,24,1,,64,64
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 8,,,24,1,,65,65
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 8,,,24,1,,66,66
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 8,,,24,1,,67,67
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 8,,,24,1,,68,68
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 8,,,24,1,,69,69
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 9,,,24,1,,70,70
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 9,,,24,1,,71,71
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 9,,,24,1,,72,72
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 9,,,24,1,,73,73
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 9,,,24,1,,74,74
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 9,,,24,1,,75,75
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 10,,,24,1,,76,76
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 10,,,24,1,,77,77
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 10,,,24,1,,78,78
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 10,,,24,1,,79,79
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 10,,,24,1,,80,80
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 10,,,24,1,,81,81
+,packets,Number of packets,24,,0,,
+Packet Length Reference: RX 11,,,24,1,,82,82
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: RX 11,,,24,1,,83,83
+,packets,Number of packets,24,,0,,
+Long Packet Counter: RX 11,,,24,1,,84,84
+,packets,Number of packets,24,,0,,
+Packet Length Reference: TX 11,,,24,1,,85,85
+,bytes,Number of bytes,24,,0,,
+Short Packet Counter: TX 11,,,24,1,,86,86
+,packets,Number of packets,24,,0,,
+Long Packet Counter: TX 11,,,24,1,,87,87
+,packets,Number of packets,24,,0,,
+MBSC Configuration,,,121,12,,88,135
+,bucketCapacity,Capacity of token bucket for this port,24,,0,,
+,initialSize,Initial number of tokens,24,,24,,
+,packetOrBytes,Tokens will be counted in Bytes/Packets(0/1),1,,48,,
+,tokenIn,Token input rate for bucket,24,,49,,
+,cyclesIn,"Time period, in clock cycles, after which tokens are added to bucket.",24,,73,,
+,minTokens,Minimum number of tokens in bucket to continue transmission.,24,,97,,
+MBSC Current Size,,,24,12,,136,147
+,currentSize,Number of tokens currently in the token bucket for this port,24,,0,,
+MBSC Enable,,,12,1,,148,148
+,enable,Bitmask where each index corresponds to respective port,12,,0,,
+MBSC Status,,,12,1,,149,149
+,STAT,Storm Control output,12,,0,,
+Serial to Parallel Overflow Drop,,,32,12,,150,161
+,packets,The number of dropped packets on this ingress port,32,,0,,
+Serial to Parallel Broken Drop,,,32,3,,162,164
+,packets,The number of dropped packets,32,,0,,
+Invalid Routing Protocol Drop,,,24,1,,165,165
+,packets,The number of dropped packets,24,,0,,
+Low TTL Drop,,,24,1,,166,166
+,packets,The number of dropped packets,24,,0,,
+L3 Lookup Drop,,,24,1,,167,167
+,packets,The number of dropped packets,24,,0,,
+L3 ACL Drop,,,24,1,,168,168
+,packets,The number of dropped packets,24,,0,,
+Egress Packet Filtering Drop,,,24,1,,169,169
+,packets,The number of dropped packets,24,,0,,
+Ingress Packet Filtering Drop,,,24,1,,170,170
+,packets,The number of dropped packets,24,,0,,
+Ingress First ACL Drop,,,24,1,,171,171
+,packets,The number of dropped packets,24,,0,,
+Ingress Second ACL Drop,,,24,1,,172,172
+,packets,The number of dropped packets,24,,0,,
+Empty Mask Drop,,,24,1,,173,173
+,packets,The number of dropped packets,24,,0,,
+L2 Flag Drop,,,24,1,,174,174
+,packets,The number of dropped packets,24,,0,,
+Reserved MAC Address Drop,,,24,1,,175,175
+,packets,The number of dropped packets,24,,0,,
+Egress Spanning Tree Drop,,,24,1,,176,176
+,packets,The number of dropped packets,24,,0,,
+Egress Port Overuse Drop,,,24,1,,177,177
+,packets,The number of dropped packets,24,,0,,
+Multicast Overuse Drop,,,24,1,,178,178
+,packets,The number of dropped packets,24,,0,,
+Ingress Spanning Tree Drop: Listen,,,24,1,,179,179
+,packets,The number of dropped packets,24,,0,,
+Ingress Spanning Tree Drop: Learning,,,24,1,,180,180
+,packets,The number of dropped packets,24,,0,,
+Ingress Spanning Tree Drop: Blocking,,,24,1,,181,181
+,packets,The number of dropped packets,24,,0,,
+VLAN Member Drop,,,24,1,,182,182
+,packets,The number of dropped packets,24,,0,,
+Minimum Allowed VLAN Drop,,,24,1,,183,183
+,packets,The number of dropped packets,24,,0,,
+Maximum Allowed VLAN Drop,,,24,1,,184,184
+,packets,The number of dropped packets,24,,0,,
+Source Port Table,,,56,12,,185,208
+,prioFromL3,"If set, choose the priority from Layer 3 decoding",1,,0,,
+,vlanSingleOp,"The source port VLAN operation to do on the packet. 0 = no operation, 1 = swap, 2 = push, 3 = pop, 4 = penultimate Pop(remove all headers)",3,,1,,
+,vidSel,"Where shall the vid come from during source port VLAN operations. 0 = from outmost VLAN in the packet (if any), 1 = from Source Port Table, 2 = from Virtual Port tag (if any)",2,,4,,
+,cfiDeiSel,"Where shall the cfi/dei come from during source port VLAN operations. 0 = from outmost VLAN in the packet, 1 = from Source Port Table",2,,6,,
+,pcpSel,"Where shall the pcp come from during source port VLAN operations. 0 = from outmost VLAN in the packet, 1 = from Source Port Table",2,,8,,
+,typeSel,"Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = user defined VLAN",2,,10,,
+,vlanAssignment,"How shall a packet VLAN be assigned. Packet based (=0) the vlan id is assigned from the incoming packet or port-based (=1) then the packets vid is assigned from the source ports defaultVid, defaultPcp and defaultCfiDei fields",1,,12,,
+,defaultVid,The default virtual lan id. Either because a non-VLAN tagget packet or because VLAN assignment is based on the port.,12,,13,,
+,defaultCfiDei,The default cfi / dei bit in the VLAN header if port based VLAN is choosen,1,,25,,
+,defaultPcp,The default pcp bits in the VLAN header if port based VLAN is choosen,3,,26,,
+,defaultEthType,The default Ethernet Type field the port assigned VLAN shall appear to be using.,16,,29,,
+,defaultPrio,The default priority which a non-VLAN marked packet will get,3,,45,,
+,minAllowedVlans,The minimum number of VLANs a packet needs to have to be allowed on this port,3,,48,,
+,maxAllowedVlans,The maximum number of VLANs a packet needs to have to be allowed in this port,3,,51,,
+,spt,"The spanning tree state for this ingress port. 0 = disabled/forwarding, 1 = blocking, 2 = listening, 3 = learning",2,,54,,
+VLAN Table,,,52,4096,,209,8400
+,vlanPortMask,Membership portmask,12,,0,,
+,gid,Global Identifier used in L2 lookup,12,,12,,
+,vlanSingleOp,"The ingress VLAN operation to do on the packet. 0 = no operation, 1 = swap, 2 = push, 3 = pop, 4 = penultimate Pop(remove all headers).",3,,24,,
+,vidSel,"Where shall the vid come from during ingress VLAN operations. 0 = from outmost VLAN in the packet, 1 = from VLAN Table",2,,27,,
+,cfiDeiSel,"Where shall the cfi/dei come from during ingress VLAN operations, 0 = from outmost VLAN in the packet, 1 = from VLAN Table",2,,29,,
+,pcpSel,"Where shall the pcp come from during ingress VLAN operations, 0 = from outmost VLAN in the packet, 1 = VLAN Table",2,,31,,
+,typeSel,"Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = user defined VLAN",2,,33,,
+,vid,New vid for VLAN operation push or swap,12,,35,,
+,pcp,New pcp for VLAN operation push or swap,3,,47,,
+,cfiDei,New cfi/dei for VLAN operation push or swap,1,,50,,
+,allowRouting,"If set, routing is allowed for this VLAN",1,,51,,
+VLAN PCP To Egress Queue Mapping Table,,,3,8,,8401,8408
+,pQueue,Egress queue,3,,0,,
+L2 Multicast Table,,,12,128,,8409,8536
+,mcPortMask,L2 portmask entry members. If set the port is part of multicast group and shall be transmitted to.,12,,0,,
+L2 DA Hash Lookup Table,,,60,4096,,8537,16728
+,macAddr,MAC address,48,,0,,
+,gid,Global identifier for learning,12,,48,,
+L2 SA Hash Lookup Table,,,60,4096,,16729,24920
+,macAddr,MAC address,48,,0,,
+,gid,Global identifier for learning,12,,48,,
+L2 Destination Table,,,9,4112,,24921,29032
+,uc,"Unicast if set (=1), multicast if cleared (=0). A multicast means that a lookup on L2 Multicast Table will take place.",1,,0,,
+,destPort_or_mcAddr,Destination port or pointer into L2 Multicast Table,7,,1,,
+,pktDrop,"If set, the packet should be dropped",1,,8,,
+L2 Destination Table - Replica,,,9,4112,,29033,33144
+,uc,"Unicast if set (=1), multicast if cleared (=0). A multicast means that a lookup on L2 Multicast Table will take place.",1,,0,,
+,destPort_or_mcAddr,Destination port or pointer into L2 Multicast Table,7,,1,,
+,pktDrop,"If set, the packet should be dropped",1,,8,,
+L2 Aging Table,,,3,4096,,33145,37240
+,valid,If this is set(=1) then this entry is valid,1,,0,,
+,stat,If this is set(=1) then this entry will not be aged out,1,,1,,
+,hit,If set then this entry has been looked up during the age time,1,,2,,
+L2 Aging Table - Replica,,,3,4096,,37241,41336
+,valid,If this is set(=1) then this entry is valid,1,,0,,
+,stat,If this is set(=1) then this entry will not be aged out,1,,1,,
+,hit,If set then this entry has been looked up during the age time,1,,2,,
+MPLS Exp Field To Egress Queue Mapping Table,,,3,8,,41337,41344
+,pQueue,Egress queue,3,,0,,
+IP TOS Field To Egress Queue Mapping Table,,,3,256,,41345,41600
+,pQueue,Egress queue,3,,0,,
+Ingress Router Table,,,10,8,,41601,41608
+,acceptIPv4,Accept IPv4 packets,1,,0,,
+,acceptIPv6,Accept IPv6 packets,1,,1,,
+,minTTL,Minimum TTL. TTL below this value will not be accepted,8,,2,,
+Hash Based L3 Routing Table,,,157,2048,,41609,57992
+,ipVersion,"Is this a IPv4 or a IPv6 Entry. 0 = IPv4 Entry, 1 = IPv6 Entry.",1,,0,,
+,vrp,The VRF to be matched for this entry.,3,,1,,
+,egressVrp,The egress router port this packet shall go out on if hit,3,,4,,
+,destIPAddr,The IP address to be matched. If the entry is a IPv4 entry then only bits [31:0] is used.,128,,7,,
+,nextHopPointer,The next hop pointer for this destination.,10,,135,,
+,useECMP,"Include TOS byte to calculate the next hop pointer, 0 = Use TOS, 1 = Dont use TOS",1,,145,,
+,ecmpMask,How many bits on the TOS header to used when calculating the ECMP offset. This byte is AND:ed with the TOS byte in the IP header to determine which bits shall be used to affect the final destination next hop address.,8,,146,,
+,ecmpShift,Start bit of the masked TOS byte to determine the value of it.,3,,154,,
+Ingress Next Hop Table,,,24,1024,,57993,59016
+,l3Mc,"Is this a L3 multicast or unicast destination. 0 = L3 unicast, 1 = L3 multicast",1,,0,,
+,l3McEntry,The pointer which to start the readout of \register{Egress L3 Multicast Table}.,7,,1,,
+,egressNextHop,The next hop pointer used for egress processing,7,,8,,
+,l2Uc,"L2 unicast or multicast. A multicast means that a lookup on \register{L2 Multicast Table} will take place. 0 = L2 unicast, 1= L2 multicast.",1,,15,,
+,destPort_or_mcAddr,Destination port or pointer into \register{L2 Multicast Table},7,,16,,
+,pktDrop,"If set, the packet should be dropped",1,,23,,
+Enable enqueue to ports and queues,,,8,12,,59017,59028
+,q_on,"If a bit is set(=1), the corresponding queue is on",8,,0,,
+Egress Queue Priority Resource Limiter,,,11,8,,59029,59036
+,cells,The number of cells in the buffer memory that will invoke the resource limiter based on queues in an egress port,11,,0,,
+Unicast Occupancy Limit,,,11,8,,59037,59044
+,cells,The maximum number of cells in the buffer memory that can be occupied by packets destined for an egress port with a certain queue,11,,0,,
+Multicast Occupancy Limit,,,11,8,,59045,59052
+,cells,The maximum number of cells in the buffer memory that can be occupid by multicast packets with a certain queue,11,,0,,
+Forward From CPU,,,1,1,,59053,59053
+,enable,If this bit is set(=1) then packets from the highest numbered port will be forwarded no matter what the spanning tree status says,1,,0,,
+Egress Spanning Tree State,,,24,1,,59054,59054
+,sptState,"State of the spanning tree protocol. Disabled or Forwarding state will forward packets on this egress port. 0 = disabled / forwarding, 1 = blocking, 2 = listening, 3 = learning.",24,,0,,
+Ethernet Multicast Handling,,,1,1,,59055,59055
+,bcEnable,"If set, packet with Ethernet multicast MAC will be treated as an broadcast packet.",1,,0,,
+Force Untagged VLAN Packet To Specific Egress Queue,,,4,1,,59056,59056
+,forcePrioQueue,"When set, packets which are non-VLAN tagged are forced to a certain egress queue",1,,0,,
+,forceQueue,The egress queue which the packet shall be send to,3,,1,,
+Ingress Ethernet Types for VLAN tags,,,16,1,,59057,59057
+,typeValue,The Ethernet Type value,16,,0,,
+L2 Aging Collision Table,,,3,16,,59058,59073
+,valid,If this is set(=1) then this entry is valid,1,,0,,
+,stat,If this is set(=1) then this entry will not be aged out,1,,1,,
+,hit,If set then this entry has been looked up during the age time,1,,2,,
+Force Unknown L3 Packet To Specific Egress Queue,,,4,1,,59074,59074
+,forcePrioQueue,"When set, unknown L3 packet types are forced to a certain egress queue",1,,0,,
+,forceQueue,The egress queue which the packet shall be send to,3,,1,,
+Ingress Port Packet Type Filter,,,9,12,,59075,59086
+,dropCtaggedVlans,"Drop or allow Customer VLANs which as 8100 tagged on this source port. 1 = Drop C-VLAN, 0 = Allow Customer VLANs.",1,,0,,
+,dropStaggedVlans,"Drop or allow Service VLANs which as 88a8 tagged on this source port. 1 = Drop S-VLAN, 0 = Allow Service VLANs.",1,,1,,
+,dropUntaggedVlans,"Drop or Allow packets which are non-VLAN tagged on this source port. 0 = Allow non VLAN tagged packets, 1 = Dont allow non-tagged packets.",1,,2,,
+,dropIPv4Packets,"Drop or allow IPv4 packets on this source port. 0 = Allow IPv4, 1 = Drop IPv4.",1,,3,,
+,dropIPv6Packets,"Drop or allow IPv6 packets on this source port. 0 = Allow IPv6, 1 = Drop IPv6.",1,,4,,
+,dropMPLSPackets,"Drop or allow MPLS packets on this source port. 0 = Allow MPLS, 1 = Drop MPLS.",1,,5,,
+,dropIPv4MulticastPackets,"Drop or allow IPv4 Multicast packets on this source port. 0 = Allow IPv4 MC, 1 = Drop IPv4 MC packets",1,,6,,
+,dropIPv6MulticastPackets,"Drop or allow IPv6 Multicast packets on this source port. 0 = Allow IPv6 MC, 1 = Drop IPv6 MC packets",1,,7,,
+,dropL2BroadcastFrames,"Drop or allow L2 Broadcast frames on this source port. 0 = Allow L2 Broadcast frames, 1 = Drop L2 Broadcast frames.",1,,8,,
+Egress Port Packet Type Filter,,,23,12,,59087,59098
+,dropCtaggedVlans,"Drop or allow Customer VLANs which as 8100 tagged on this source port. 1 = Drop C-VLAN, 0 = Allow Customer VLANs.",1,,0,,
+,dropStaggedVlans,"Drop or allow Service VLANs which as 88a8 tagged on this source port. 1 = Drop S-VLAN, 0 = Allow Service VLANs.",1,,1,,
+,dropUntaggedVlans,"Drop or Allow packets which are non-VLAN tagged on this source port. 0 = Allow non VLAN tagged packets, 1 = Dont allow non-tagged packets.",1,,2,,
+,dropIPv4Packets,"Drop or allow IPv4 packets on this source port. 0 = Allow IPv4, 1 = Drop IPv4.",1,,3,,
+,dropIPv6Packets,"Drop or allow IPv6 packets on this source port. 0 = Allow IPv6, 1 = Drop IPv6.",1,,4,,
+,dropMPLSPackets,"Drop or allow MPLS packets on this source port. 0 = Allow MPLS, 1 = Drop MPLS.",1,,5,,
+,dropIPv4MulticastPackets,"Drop or allow IPv4 Multicast packets on this source port. 0 = Allow IPv4 MC, 1 = Drop IPv4 MC packets",1,,6,,
+,dropIPv6MulticastPackets,"Drop or allow IPv6 Multicast packets on this source port. 0 = Allow IPv6 MC, 1 = Drop IPv6 MC packets",1,,7,,
+,dropL2BroadcastFrames,"Drop or allow L2 Broadcast frames on this source port. 0 = Allow L2 Broadcast frames, 1 = Drop L2 Broadcast frames.",1,,8,,
+,dropL2FloodingFrames,"Drop or allow L2 Flooding frames on this egress port. 0 = Allow L2 Broadcast frames, 1 = Drop L2 Flooding frames.",1,,9,,
+,dropL2MulticastFrames,"Drop or allow L2 Multicast frames on this egress port. 0 = Allow L2 Multicast frames, 1 = Drop L2 Multicast frames.",1,,10,,
+,srcPortFilter,Each egress port has a optional way of making sure that only a specific source ports does not send out a packet on a specific egress port. By setting a bit (=1) in this portmask the packets originating from that source port will be dropped and not be allowed to reach this egress port.,12,,11,,
+Ingress First ACL Result Operation Entries,,,11,4,,59099,59102
+,dropEnable,"If this acl entry is being hit the packet shall be dropped. 1= Drop, 0 = Dont drop.",1,,0,,
+,sendToCpu,If this acl entry comparion is true then the packet is sent to the cpu.,1,,1,,
+,forcePrio,The egress packet queue priority which shall be assigned to the packet if the forceEgressPrio field is set,3,,2,,
+,forceEgressPrio,"If the address was withing the range the packet shall have a forced egress port queue priority. Please see the Egress Queue Priority Selection Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the true path in the diagram, 0 = Assignment of priority according the Matches MAC Range,ACL Miss false path in the diagram",1,,5,,
+,sendToPort,"Send the packet to a specific port. 1= Send to port, 0 = Dont send.",1,,6,,
+,destPort,The port which the packet shall be sent to.,4,,7,,
+Ingress Second ACL Result Operation Entries,,,11,4,,59103,59106
+,dropEnable,"If this acl entry is being hit the packet shall be dropped. 1= Drop, 0 = Dont drop.",1,,0,,
+,sendToCpu,If this acl entry comparion is true then the packet is sent to the cpu.,1,,1,,
+,forcePrio,The egress packet queue priority which shall be assigned to the packet if the forceEgressPrio field is set,3,,2,,
+,forceEgressPrio,"If the address was withing the range the packet shall have a forced egress port queue priority. Please see the Egress Queue Priority Selection Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the true path in the diagram, 0 = Assignment of priority according the Matches MAC Range,ACL Miss false path in the diagram",1,,5,,
+,sendToPort,"Send the packet to a specific port. 1= Send to port, 0 = Dont send.",1,,6,,
+,destPort,The port which the packet shall be sent to.,4,,7,,
+L3 Routing Default,,,14,8,,59107,59114
+,nextHop,The default next hop to be used.,10,,0,,
+,egressVrp,The egress router port this packet shall go out on.,3,,10,,
+,pktDrop, Drop the packet,1,,13,,
+Ingress L3/L4 ACL Result Operation Entries,,,11,4,,59115,59118
+,dropEnable,"If this ACL entry is being hit the packet shall be dropped. 1 = Drop, 0 = Do not drop.",1,,0,,
+,sendToCpu,If this ACL entry comparion is true then the packet is sent to the CPU.,1,,1,,
+,forcePrio,The egress packet queue priority which shall be assigned to the packet if forceEgressPrio field is set,3,,2,,
+,forceEgressPrio,"If the address was withing the range the packet shall have a forced egress port queue priority. Please see the Egress Queue Priority Selection Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the True path in the diagram, 0 = Assignment of priority according the Matches MAC Range,ACL Miss false path in the diagram",1,,5,,
+,sendToPort,"Send the packet to a specific port. 1 = Send to port, 0 = Dont send.",1,,6,,
+,destPort,The port which the packet shall be sent to.,4,,7,,
+Send to CPU,,,51,1,,59119,59120
+,allowBpdu,"If set, then packets which have the Destination MAC Address equals to 01:80:C2:00:00:00 will be sent to the CPU port",1,,0,,
+,allowRstBpdu,"If set, then packets which have the Destination MAC Address equals to 01:00:0C:CC:CC:CD will be sent to the CPU port",1,,1,,
+,uniqueCpuMac,"If set, unicast packets can be sent to the CPU port only when the Destination MAC Address equals the customized CPU MAC address",1,,2,,
+,cpuMacAddr,"The customized CPU MAC address, only valid if uniqueCpuMAC is set(=1) ",48,,3,,
+L2 Lookup Collision Table,,,60,16,,59121,59152
+,macAddr,MAC address,48,,0,,
+,gid,Global identifier for learning,12,,48,,
+Reserved Destination MAC Address Range,,,114,2,,59153,59160
+,enable,"Enable the reserved DA check per source port. If a bit is set to one, the reserved mac DA range is activated for that source port",12,,0,,
+,startAddr,The reserved mac start address to compare destination addresses to,48,,12,,
+,stopAddr,The reserved mac end address to compare destination addresses to,48,,60,,
+,dropEnable,If the address was within the range the packet shall be dropped.,1,,108,,
+,sendToCpu,If the address was within the range the packet shall be sent to the cpu,1,,109,,
+,forceEgressPrio,"If the address was withing the range the packet shall have a forced egress port queue priority. Please see the Egress Queue Priority Selection Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the true path in the diagram, 0 = Assignment of priority according the Matches MAC Range false path in the diagram",1,,110,,
+,forcePrio,The egress packet queue priority which shall be assigned to the packet if the force egress port priority is set,3,,111,,
+Ingress First ACL Match Data Entries,,,87,4,,59161,59176
+,ports,For which ports should this filter rule apply.,12,,0,,
+,compareDaMac,"In this acl entry shall the DA Mac address be compared. 1 = include the DA MAC in the comparison, 0 = dont include the DA Mac in the comparison",1,,12,,
+,daMac,The Destination MAC address to be compared,48,,13,,
+,compareEthType,"In this acl entry shall the Ethernet Type after a potential SVLAN or CCLAN identifier be compared. 1 = include the Ethernet identifier in the comparison, 0 = dont include the Ethernet Type in the comparison",1,,61,,
+,ethType,The Ethernet type identifier to be compared,16,,62,,
+,compareFirstByte,"In this acl entry shall the first byte after the Ethernet Type be compared. 1 = include the first byte in the comparison, 0 = dont include the first byte in the comparison",1,,78,,
+,firstByte,The byte to be compared,8,,79,,
+Router Port MAC Address,,,100,16,,59177,59240
+,macAddress,The base DA MAC address which is used to get to the router,48,,0,,
+,macMask,"Each bit says if the bit in the DA MAC shall be compared. 0 = Dont compare bit, 1 = Compare bit",48,,48,,
+,valid,"If set, this entry is valid for comparison",1,,96,,
+,vrp,VRF for this MAC address,3,,97,,
+Ingress Second ACL Match Data Entries,,,136,4,,59241,59272
+,ports,For which ports should this filter rule apply.,12,,0,,
+,compareDaMac,"In this acl entry shall the DA Mac address be compared. 1 = include the DA MAC in the comparison, 0 = dont include the DA Mac in the comparison",1,,12,,
+,daMac,The Destination MAC address to be compared,48,,13,,
+,compareSaMac,"In this acl entry shall the SA Mac address be compared. 1 = include the SA MAC in the comparison, 0 = dont include the SA Mac in the comparison",1,,61,,
+,saMac,The source MAC address to be compared,48,,62,,
+,compareEthType,"In this acl entry shall the Ethernet Type after a potential SVLAN or CCLAN identifier be compared. 1 = include the Ethernet identifier in the comparison, 0 = dont include the Ethernet Type in the comparison",1,,110,,
+,ethType,The Ethernet type identifier to be compared,16,,111,,
+,compareFirstByte,"In this acl entry shall the first byte after the Ethernet Type be compared. 1 = include the first byte in the comparison, 0 = dont include the first byte in the comparison",1,,127,,
+,firstByte,The byte to be compared,8,,128,,
+L3 Routing TCAM,,,285,8,,59273,59400
+,ipVersion,"Is this a IPv4 or a IPv6 Entry. 0 = IPv4 Entry, 1 = IPv6 Entry.",1,,0,,
+,vrp,The VRF to be matched for this entry.,3,,1,,
+,egressVrp,The egress router port this packet shall go out on if hit,3,,4,,
+,destIPAddr,The IP address to be matched. If the entry is a IPv4 entry then only bits [31:0] is used.,128,,7,,
+,mask,"Each bit says if the bit in the destination IP address shall be compared. 0 = Dont compare bit, 1 = Compare bit",128,,135,,
+,nextHopPointer,The next hop pointer for this destination,10,,263,,
+,useECMP,"Include TOS byte to calculate the next hop pointer, 0 = Use TOS, 1 = Dont use TOS",1,,273,,
+,ecmpMask,How many bits on the TOS header to used when calculating the ECMP offset. This byte is AND:ed with the TOS byte in the IP header to determine which bits shall be used to affect the final destination next hop address.,8,,274,,
+,ecmpShift,Start bit of the masked TOS byte to determine the value of it.,3,,282,,
+Ingress L3/L4 ACL Match Data Entries,,,352,4,,59401,59464
+,ports,For which source ports should this filter rule apply.,12,,0,,
+,compareRouted,"Shall the routed bit be compared or not. 1 = Include the Routed bit in the comparison, 0 = Dont include the routed bit in the comparison.",1,,12,,
+,routed,"0 = Routed packet, 1 = Not routed",1,,13,,
+,compareVrp,"Shall the packets VRF be compared or not. 1 = Include the ingress VRF port in the comparison, 0 = Dont include the ingress VRF in the comparison.",1,,14,,
+,vrp,For which VRF shall this filter rule apply.,3,,15,,
+,compareIPv4,"Shall the IPv4 packet type be compared. 1 = Include the comparison in the search, 0 = Dont include the comparison in the search",1,,18,,
+,isIPv4,"0 = No IPv4 in the packet, 1 = IPv4 in the packet.",1,,19,,
+,compareIPv6,"Shall the IPv6 packet type be compared. 1 = Include the comparison in the search, 0 = Dont include the comparison in the search",1,,20,,
+,isIPv6,"0 = No IPv6 in the packet, 1 = IPv6 in the packet",1,,21,,
+,compareMPLS,"Shall the MPLS packet type be compared. 1 = Include the comparison in the search, 0 = Dont include the comparison in the search",1,,22,,
+,isMPLS,"0 = No MPLS in the packet, 1= MPLS in the packet",1,,23,,
+,compareSip,Shall the source IPv4 / IPv6 address be compared,1,,24,,
+,sip,The source address to compare. If IPv4 then only bits [31:0] are compared.,128,,25,,
+,compareDip,Shall the destination IPv4 / IPv6 address be compared.,1,,153,,
+,dip,The destination address to compare. If IPv4 then only bits [31:0] are compared.,128,,154,,
+,compareTos,Shall the TOS byte be compared,1,,282,,
+,tos,TOS byte to be compared,8,,283,,
+,compareL4Type,Shall the L4 payload type byte be compared,1,,291,,
+,l4Type,The L4 payload byte to be compared.,8,,292,,
+,compareL4sp,Shall the L4 Source Port be compared,1,,300,,
+,l4sp,The L4 source port to be compared.,16,,301,,
+,compareL4dp,Shall the L4 destination port be compared,1,,317,,
+,l4dp,The L4 destination port to be compared.,16,,318,,
+,compareTcpFlagMask,"Which of the TCP bits shall be compared. For each bit: 1 = The bit has to match, 0 = The bit is ignored",9,,334,,
+,tcpFlags,"The TCP flags to compare. Bit [8] = ns, Bit [7] = cwr, Bit[6] = ece, Bit[5] = urg, Bit[4] = ack, Bit[3] = psh, Bit [2] = rst, Bit[1] = syn , Bit[0] = fin",9,,343,,
+Output Disable,,,8,12,,59465,59476
+,egressQueue0Disabled,"If set, stop scheduling new packets for output from queue 0 on this egress port",1,,0,,
+,egressQueue1Disabled,"If set, stop scheduling new packets for output from queue 1 on this egress port",1,,1,,
+,egressQueue2Disabled,"If set, stop scheduling new packets for output from queue 2 on this egress port",1,,2,,
+,egressQueue3Disabled,"If set, stop scheduling new packets for output from queue 3 on this egress port",1,,3,,
+,egressQueue4Disabled,"If set, stop scheduling new packets for output from queue 4 on this egress port",1,,4,,
+,egressQueue5Disabled,"If set, stop scheduling new packets for output from queue 5 on this egress port",1,,5,,
+,egressQueue6Disabled,"If set, stop scheduling new packets for output from queue 6 on this egress port",1,,6,,
+,egressQueue7Disabled,"If set, stop scheduling new packets for output from queue 7 on this egress port",1,,7,,
+Buffer Overflow Drop,,,24,1,,59477,59477
+,packets,The number of dropped packets,24,,0,,
+Buffer Broken Drop,,,24,1,,59478,59478
+,packets,The number of dropped packets,24,,0,,
+Redirect,,,9,1,,59479,59479
+,redirectEnabled,"If set, redirect is enabled",1,,0,,
+,fromEgressPort,The egress port that redirect from,4,,1,,
+,toEgressPort,The egress port that redirect to. Only valid if redirectEnabled is set,4,,5,,
+Egress Port Resource Management,,,11,12,,59480,59491
+,packets,Available number of packets for egress port ,11,,0,,
+Egress Queue Resource Management,,,11,96,,59492,59587
+,packets,Available number of packets for a queue on egress port,11,,0,,
+Egress Port Disabled Drop,,,24,1,,59588,59588
+,packets,The number of dropped packets,24,,0,,
+L3 Multicast Drop,,,24,1,,59589,59589
+,packets,The number of dropped packets,24,,0,,
+Egress Queue To PCP And CFI/DEI Mapping Table,,,4,8,,59590,59597
+,cfiDei,Map from egress queue to cfi/dei,1,,0,,
+,pcp,Map from egress queue to pcp,3,,1,,
+Egress Port Configuration,,,28,12,,59598,59609
+,vlanSingleOp,"The egress port VLAN tag operation allows a egress port to have a final VLAN operation on the outgoing packet. 0 = no operation, 1 = swap, 2 = push, 3 = pop, 4 = penultimate Pop(remove all headers)",3,,0,,
+,vidSel,"Where shall the vid come from during egress port VLAN operations. 0 = from outmost VLAN in the packet, 1= from Egress Port Configuration Table, 2 = from vid used by ingress",2,,3,,
+,cfiDeiSel,"Where shall the cfi/dei come from during the egress port VLAN operation. 0 = from outmost VLAN in the packet, 1 = from Egress Port Configuration Table, 2 = from Egress Queue To PCP And CFI/DEI Mapping Table",2,,5,,
+,pcpSel,"Where shall the pcp come from during the egress port VLAN operation. 0 = from outmost VLAN in the packet, 1 = from Egress Port Configuration Table, 2 = from Egress Queue To PCP And CFI/DEI Mapping Table",2,,7,,
+,typeSel,"Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = user defined VLAN ",2,,9,,
+,vid,New vid to be selected on egress port VLAN operations push or swap,12,,11,,
+,cfiDei,New cfi/dei to be selected on egress port VLAN operations push or swap,1,,23,,
+,pcp,New pcp to be selected on egress port VLAN operations push or swap,3,,24,,
+,disabled,If set all packets on this port is dropped. Setting this field to one means all packets are droped while zero means packets are sent out.,1,,27,,
+Egress Next Hop Table,,,51,128,,59610,59865
+,daMac,The destination MAC address for the next hop,48,,0,,
+,vlanOpPtr,VLAN operation pointer to \register{Egress Router VLAN Operation Table}. Only valid when \field{Egress Router Table}{vopSel} is set to 1.,3,,48,,
+Egress Router VLAN Operation Table,,,54,8,,59866,59881
+,outerVlanAppend,"Shall the router append a outer VLAN tag to the packet, 0 = Dont append outer VLAN, 1 = Append outer VLAN",1,,0,,
+,outerPcpSel,"Where shall the outer PCP bits come from. 0 = From existing packet , 1= From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI Mapping Table}.",2,,1,,
+,outerCfiDeiSel,"Where shall the outer CFI/DEI bits come from. 0 = From existing packet , 1= From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI Mapping Table}.",2,,3,,
+,outerEthType,"Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = User defined VLAN",2,,5,,
+,outerVid,The outer VLAN Identifier to be added to the packet,16,,7,,
+,outerPcp,The new outer PCP value from this table.,3,,23,,
+,outerCfiDei,The new outer CFI/DEI value from this table.,1,,26,,
+,innerVlanAppend,"Shall the router append a inner VLAN tag to the packet, 0 = Dont append inner VLAN, 1 = Append inner VLAN",1,,27,,
+,innerPcpSel,"Where shall the inner PCP bits come from. 0 = From existing packet , 1 = From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI Mapping Table}.",2,,28,,
+,innerCfiDeiSel,"Where shall the inner CFI/DEI bits come from. 0 = From existing packet , 1 = From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI Mapping Table}.",2,,30,,
+,innerEthType,"Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = User defined VLAN",2,,32,,
+,innerVid,The inner VLAN Identifier to be added to the packet,16,,34,,
+,innerPcp,The new inner PCP value from this table.,3,,50,,
+,innerCfiDei,The new inner CFI/DEI value from this table.,1,,53,,
+Egress Router Table,,,61,8,,59882,59897
+,saMac,The source MAC address to be used for this router,48,,0,,
+,vlanOpPtr,VLAN operation pointer to \register{Egress Router VLAN Operation Table}. Only valid when vopSel is set to 0.,3,,48,,
+,vopSel,"Determine where the VLAN operation pointer is located. 0 = From this table, 1 = From \register{Egress Next Hop Table}",1,,51,,
+,addNewTTL,"Shall the router add a new TTL for this packet. 0 = No keep old value (which has been decremented by one), 1 = set a new value.",1,,52,,
+,newTTL,New TTL for the packet. Only valid when addNewTTL is set to 1,8,,53,,
+Egress L3 Multicast Table,,,32,128,,59898,60025
+,portMask,This entry says to which ports this entry shall be send to.,12,,0,,
+,vlanOpPtr,VLAN operation pointer to \register{Egress Router VLAN Operation Table}.,3,,12,,
+,nextHop,This is the egress next hop entry holding the destination MAC address.,7,,15,,
+,nextMcPtr,This is the next entry to readout from this table. Setting this to zero means no more entries shall be read out.,7,,22,,
+,egressVrp,The egress VRF on which to send out these packets on,3,,29,,
+Egress Ethernet Types for VLAN tags,,,16,5,,60026,60030
+,typeValue,The Ethernet Type value,16,,0,,
+Disable CPU tag on CPU Port,,,1,1,,60031,60031
+,disable,When set to one (=1) the CPU port will no longer append a CPU Tag to the packet going to the CPU port.,1,,0,,
+Learning And Aging Software Control,,,2,1,,60032,60032
+,learningEnable,"If set, the learning engine will be activated",1,,0,,
+,agingEnable,"If set, the aging engine will be activated",1,,1,,
+Time to Age,,,32,1,,60033,60033
+,cycles,Cycles after which aging should kick in.,32,,0,,

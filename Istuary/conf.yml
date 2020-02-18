@@ -1,0 +1,3477 @@
+conf bus 0:
+  Buffer Broken Drop:
+    Address step: 1
+    End address: 59478
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 59478
+    Width: 24
+  Buffer Free:
+    Address step: 1
+    End address: 1
+    Fields:
+    - Default value: 1116
+      Description: Number of free cells
+      End bit: 10
+      Name: cells
+      Start bit: 0
+      Width: 11
+    Number of entries: 1
+    Start address: 1
+    Width: 11
+  Buffer Overflow Drop:
+    Address step: 1
+    End address: 59477
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 59477
+    Width: 24
+  Core Version:
+    Address step: 1
+    End address: 0
+    Fields:
+    - Default value: 28611407
+      Description: Version of the core
+      End bit: 31
+      Name: version
+      Start bit: 0
+      Width: 32
+    Number of entries: 1
+    Start address: 0
+    Width: 32
+  Disable CPU tag on CPU Port:
+    Address step: 1
+    End address: 60031
+    Fields:
+    - Default value: 0
+      Description: When set to one (=1) the CPU port will no longer append a CPU Tag
+        to the packet going to the CPU port.
+      End bit: 0
+      Name: disable
+      Start bit: 0
+      Width: 1
+    Index: address
+    Number of entries: 1
+    Start address: 60031
+    Width: 1
+  Drain Port:
+    Address step: 1
+    End address: 3
+    Fields:
+    - Default value: 0
+      Description: The egress port to be drained. Only valid if drainEnable is set
+      End bit: 3
+      Name: drainPort
+      Start bit: 0
+      Width: 4
+    - Default value: 0
+      Description: If set, drain queue is enabled
+      End bit: 4
+      Name: drainEnable
+      Start bit: 4
+      Width: 1
+    Number of entries: 1
+    Start address: 3
+    Width: 5
+  Drain Port Drop:
+    Address step: 1
+    End address: 15
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 31
+      Name: packets
+      Start bit: 0
+      Width: 32
+    Index: Egress port
+    Number of entries: 12
+    Start address: 4
+    Width: 32
+  Egress Ethernet Types for VLAN tags:
+    Address step: 1
+    End address: 60030
+    Fields:
+    - Default value: 65535
+      Description: The Ethernet Type value
+      End bit: 15
+      Name: typeValue
+      Start bit: 0
+      Width: 16
+    Index: The VLAN tag number in the packet
+    Number of entries: 5
+    Start address: 60026
+    Width: 16
+  Egress L3 Multicast Table:
+    Address step: 1
+    End address: 60025
+    Fields:
+    - Default value: 0
+      Description: This entry says to which ports this entry shall be send to.
+      End bit: 11
+      Name: portMask
+      Start bit: 0
+      Width: 12
+    - Default value: 0
+      Description: VLAN operation pointer to \register{Egress Router VLAN Operation
+        Table}.
+      End bit: 14
+      Name: vlanOpPtr
+      Start bit: 12
+      Width: 3
+    - Default value: 0
+      Description: This is the egress next hop entry holding the destination MAC address.
+      End bit: 21
+      Name: nextHop
+      Start bit: 15
+      Width: 7
+    - Default value: 0
+      Description: This is the next entry to readout from this table. Setting this
+        to zero means no more entries shall be read out.
+      End bit: 28
+      Name: nextMcPtr
+      Start bit: 22
+      Width: 7
+    - Default value: 0
+      Description: The egress VRF on which to send out these packets on
+      End bit: 31
+      Name: egressVrp
+      Start bit: 29
+      Width: 3
+    Index: L3 multicast pointer
+    Number of entries: 128
+    Start address: 59898
+    Width: 32
+  Egress Next Hop Table:
+    Address step: 2
+    End address: 59865
+    Fields:
+    - Default value: 0
+      Description: The destination MAC address for the next hop
+      End bit: 47
+      Name: daMac
+      Start bit: 0
+      Width: 48
+    - Default value: 0
+      Description: VLAN operation pointer to \register{Egress Router VLAN Operation
+        Table}. Only valid when \field{Egress Router Table}{vopSel} is set to 1.
+      End bit: 50
+      Name: vlanOpPtr
+      Start bit: 48
+      Width: 3
+    Index: \field{Ingress Next Hop Table}{egressNextHop}
+    Number of entries: 128
+    Start address: 59610
+    Width: 51
+  Egress Packet Filtering Drop:
+    Address step: 1
+    End address: 169
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 169
+    Width: 24
+  Egress Port Configuration:
+    Address step: 1
+    End address: 59609
+    Fields:
+    - Default value: 0
+      Description: The egress port VLAN tag operation allows a egress port to have
+        a final VLAN operation on the outgoing packet. 0 = no operation, 1 = swap,
+        2 = push, 3 = pop, 4 = penultimate Pop(remove all headers)
+      End bit: 2
+      Name: vlanSingleOp
+      Start bit: 0
+      Width: 3
+    - Default value: 0
+      Description: Where shall the vid come from during egress port VLAN operations.
+        0 = from outmost VLAN in the packet, 1= from Egress Port Configuration Table,
+        2 = from vid used by ingress
+      End bit: 4
+      Name: vidSel
+      Start bit: 3
+      Width: 2
+    - Default value: 0
+      Description: Where shall the cfi/dei come from during the egress port VLAN operation.
+        0 = from outmost VLAN in the packet, 1 = from Egress Port Configuration Table,
+        2 = from Egress Queue To PCP And CFI/DEI Mapping Table
+      End bit: 6
+      Name: cfiDeiSel
+      Start bit: 5
+      Width: 2
+    - Default value: 0
+      Description: Where shall the pcp come from during the egress port VLAN operation.
+        0 = from outmost VLAN in the packet, 1 = from Egress Port Configuration Table,
+        2 = from Egress Queue To PCP And CFI/DEI Mapping Table
+      End bit: 8
+      Name: pcpSel
+      Start bit: 7
+      Width: 2
+    - Default value: 0
+      Description: 'Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = user defined
+        VLAN '
+      End bit: 10
+      Name: typeSel
+      Start bit: 9
+      Width: 2
+    - Default value: 0
+      Description: New vid to be selected on egress port VLAN operations push or swap
+      End bit: 22
+      Name: vid
+      Start bit: 11
+      Width: 12
+    - Default value: 0
+      Description: New cfi/dei to be selected on egress port VLAN operations push
+        or swap
+      End bit: 23
+      Name: cfiDei
+      Start bit: 23
+      Width: 1
+    - Default value: 0
+      Description: New pcp to be selected on egress port VLAN operations push or swap
+      End bit: 26
+      Name: pcp
+      Start bit: 24
+      Width: 3
+    - Default value: 0
+      Description: If set all packets on this port is dropped. Setting this field
+        to one means all packets are droped while zero means packets are sent out.
+      End bit: 27
+      Name: disabled
+      Start bit: 27
+      Width: 1
+    Index: Egress port
+    Number of entries: 12
+    Start address: 59598
+    Width: 28
+  Egress Port Disabled Drop:
+    Address step: 1
+    End address: 59588
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 59588
+    Width: 24
+  Egress Port Overuse Drop:
+    Address step: 1
+    End address: 177
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 177
+    Width: 24
+  Egress Port Packet Type Filter:
+    Address step: 1
+    End address: 59098
+    Fields:
+    - Default value: 0
+      Description: Drop or allow Customer VLANs which as 8100 tagged on this source
+        port. 1 = Drop C-VLAN, 0 = Allow Customer VLANs.
+      End bit: 0
+      Name: dropCtaggedVlans
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow Service VLANs which as 88a8 tagged on this source
+        port. 1 = Drop S-VLAN, 0 = Allow Service VLANs.
+      End bit: 1
+      Name: dropStaggedVlans
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: Drop or Allow packets which are non-VLAN tagged on this source
+        port. 0 = Allow non VLAN tagged packets, 1 = Dont allow non-tagged packets.
+      End bit: 2
+      Name: dropUntaggedVlans
+      Start bit: 2
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv4 packets on this source port. 0 = Allow IPv4,
+        1 = Drop IPv4.
+      End bit: 3
+      Name: dropIPv4Packets
+      Start bit: 3
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv6 packets on this source port. 0 = Allow IPv6,
+        1 = Drop IPv6.
+      End bit: 4
+      Name: dropIPv6Packets
+      Start bit: 4
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow MPLS packets on this source port. 0 = Allow MPLS,
+        1 = Drop MPLS.
+      End bit: 5
+      Name: dropMPLSPackets
+      Start bit: 5
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv4 Multicast packets on this source port. 0 = Allow
+        IPv4 MC, 1 = Drop IPv4 MC packets
+      End bit: 6
+      Name: dropIPv4MulticastPackets
+      Start bit: 6
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv6 Multicast packets on this source port. 0 = Allow
+        IPv6 MC, 1 = Drop IPv6 MC packets
+      End bit: 7
+      Name: dropIPv6MulticastPackets
+      Start bit: 7
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow L2 Broadcast frames on this source port. 0 = Allow
+        L2 Broadcast frames, 1 = Drop L2 Broadcast frames.
+      End bit: 8
+      Name: dropL2BroadcastFrames
+      Start bit: 8
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow L2 Flooding frames on this egress port. 0 = Allow
+        L2 Broadcast frames, 1 = Drop L2 Flooding frames.
+      End bit: 9
+      Name: dropL2FloodingFrames
+      Start bit: 9
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow L2 Multicast frames on this egress port. 0 = Allow
+        L2 Multicast frames, 1 = Drop L2 Multicast frames.
+      End bit: 10
+      Name: dropL2MulticastFrames
+      Start bit: 10
+      Width: 1
+    - Default value: 0
+      Description: Each egress port has a optional way of making sure that only a
+        specific source ports does not send out a packet on a specific egress port.
+        By setting a bit (=1) in this portmask the packets originating from that source
+        port will be dropped and not be allowed to reach this egress port.
+      End bit: 22
+      Name: srcPortFilter
+      Start bit: 11
+      Width: 12
+    Index: address
+    Number of entries: 12
+    Start address: 59087
+    Width: 23
+  Egress Port Resource Management:
+    Address step: 1
+    End address: 59491
+    Fields:
+    - Default value: 0
+      Description: 'Available number of packets for egress port '
+      End bit: 10
+      Name: packets
+      Start bit: 0
+      Width: 11
+    Index: Egress port
+    Number of entries: 12
+    Start address: 59480
+    Width: 11
+  Egress Queue Priority Resource Limiter:
+    Address step: 1
+    End address: 59036
+    Fields:
+    - Default value: 558
+      Description: The number of cells in the buffer memory that will invoke the resource
+        limiter based on queues in an egress port
+      End bit: 10
+      Name: cells
+      Start bit: 0
+      Width: 11
+    Index: Egress queue
+    Number of entries: 8
+    Start address: 59029
+    Width: 11
+  Egress Queue Resource Management:
+    Address step: 1
+    End address: 59587
+    Fields:
+    - Default value: 0
+      Description: Available number of packets for a queue on egress port
+      End bit: 10
+      Name: packets
+      Start bit: 0
+      Width: 11
+    Index: (Egress Port)+(Egress Queue)
+    Number of entries: 96
+    Start address: 59492
+    Width: 11
+  Egress Queue To PCP And CFI/DEI Mapping Table:
+    Address step: 1
+    End address: 59597
+    Fields:
+    - Default value: 0
+      Description: Map from egress queue to cfi/dei
+      End bit: 0
+      Name: cfiDei
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Map from egress queue to pcp
+      End bit: 3
+      Name: pcp
+      Start bit: 1
+      Width: 3
+    Index: address
+    Number of entries: 8
+    Start address: 59590
+    Width: 4
+  Egress Router Table:
+    Address step: 2
+    End address: 59897
+    Fields:
+    - Default value: 0
+      Description: The source MAC address to be used for this router
+      End bit: 47
+      Name: saMac
+      Start bit: 0
+      Width: 48
+    - Default value: 0
+      Description: VLAN operation pointer to \register{Egress Router VLAN Operation
+        Table}. Only valid when vopSel is set to 0.
+      End bit: 50
+      Name: vlanOpPtr
+      Start bit: 48
+      Width: 3
+    - Default value: 0
+      Description: Determine where the VLAN operation pointer is located. 0 = From
+        this table, 1 = From \register{Egress Next Hop Table}
+      End bit: 51
+      Name: vopSel
+      Start bit: 51
+      Width: 1
+    - Default value: 0
+      Description: Shall the router add a new TTL for this packet. 0 = No keep old
+        value (which has been decremented by one), 1 = set a new value.
+      End bit: 52
+      Name: addNewTTL
+      Start bit: 52
+      Width: 1
+    - Default value: 0
+      Description: New TTL for the packet. Only valid when addNewTTL is set to 1
+      End bit: 60
+      Name: newTTL
+      Start bit: 53
+      Width: 8
+    Index: Egress VRF
+    Number of entries: 8
+    Start address: 59882
+    Width: 61
+  Egress Router VLAN Operation Table:
+    Address step: 2
+    End address: 59881
+    Fields:
+    - Default value: 0
+      Description: Shall the router append a outer VLAN tag to the packet, 0 = Dont
+        append outer VLAN, 1 = Append outer VLAN
+      End bit: 0
+      Name: outerVlanAppend
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Where shall the outer PCP bits come from. 0 = From existing packet
+        , 1= From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI Mapping
+        Table}.
+      End bit: 2
+      Name: outerPcpSel
+      Start bit: 1
+      Width: 2
+    - Default value: 0
+      Description: Where shall the outer CFI/DEI bits come from. 0 = From existing
+        packet , 1= From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI
+        Mapping Table}.
+      End bit: 4
+      Name: outerCfiDeiSel
+      Start bit: 3
+      Width: 2
+    - Default value: 0
+      Description: Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = User defined
+        VLAN
+      End bit: 6
+      Name: outerEthType
+      Start bit: 5
+      Width: 2
+    - Default value: 0
+      Description: The outer VLAN Identifier to be added to the packet
+      End bit: 22
+      Name: outerVid
+      Start bit: 7
+      Width: 16
+    - Default value: 0
+      Description: The new outer PCP value from this table.
+      End bit: 25
+      Name: outerPcp
+      Start bit: 23
+      Width: 3
+    - Default value: 0
+      Description: The new outer CFI/DEI value from this table.
+      End bit: 26
+      Name: outerCfiDei
+      Start bit: 26
+      Width: 1
+    - Default value: 0
+      Description: Shall the router append a inner VLAN tag to the packet, 0 = Dont
+        append inner VLAN, 1 = Append inner VLAN
+      End bit: 27
+      Name: innerVlanAppend
+      Start bit: 27
+      Width: 1
+    - Default value: 0
+      Description: Where shall the inner PCP bits come from. 0 = From existing packet
+        , 1 = From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI
+        Mapping Table}.
+      End bit: 29
+      Name: innerPcpSel
+      Start bit: 28
+      Width: 2
+    - Default value: 0
+      Description: Where shall the inner CFI/DEI bits come from. 0 = From existing
+        packet , 1 = From this table, 2 = From \register{Egress Queue To PCP And CFI/DEI
+        Mapping Table}.
+      End bit: 31
+      Name: innerCfiDeiSel
+      Start bit: 30
+      Width: 2
+    - Default value: 0
+      Description: Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = User defined
+        VLAN
+      End bit: 33
+      Name: innerEthType
+      Start bit: 32
+      Width: 2
+    - Default value: 0
+      Description: The inner VLAN Identifier to be added to the packet
+      End bit: 49
+      Name: innerVid
+      Start bit: 34
+      Width: 16
+    - Default value: 0
+      Description: The new inner PCP value from this table.
+      End bit: 52
+      Name: innerPcp
+      Start bit: 50
+      Width: 3
+    - Default value: 0
+      Description: The new inner CFI/DEI value from this table.
+      End bit: 53
+      Name: innerCfiDei
+      Start bit: 53
+      Width: 1
+    Index: VLAN operation pointer
+    Number of entries: 8
+    Start address: 59866
+    Width: 54
+  Egress Spanning Tree Drop:
+    Address step: 1
+    End address: 176
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 176
+    Width: 24
+  Egress Spanning Tree State:
+    Address step: 1
+    End address: 59054
+    Fields:
+    - Default value: 0
+      Description: State of the spanning tree protocol. Disabled or Forwarding state
+        will forward packets on this egress port. 0 = disabled / forwarding, 1 = blocking,
+        2 = listening, 3 = learning.
+      End bit: 23
+      Name: sptState
+      Start bit: 0
+      Width: 24
+    Index: address
+    Number of entries: 1
+    Start address: 59054
+    Width: 24
+  Empty Mask Drop:
+    Address step: 1
+    End address: 173
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 173
+    Width: 24
+  Enable enqueue to ports and queues:
+    Address step: 1
+    End address: 59028
+    Fields:
+    - Default value: 255
+      Description: If a bit is set(=1), the corresponding queue is on
+      End bit: 7
+      Name: q_on
+      Start bit: 0
+      Width: 8
+    Index: Egress Port
+    Number of entries: 12
+    Start address: 59017
+    Width: 8
+  Ethernet Multicast Handling:
+    Address step: 1
+    End address: 59055
+    Fields:
+    - Default value: 0
+      Description: If set, packet with Ethernet multicast MAC will be treated as an
+        broadcast packet.
+      End bit: 0
+      Name: bcEnable
+      Start bit: 0
+      Width: 1
+    Index: address
+    Number of entries: 1
+    Start address: 59055
+    Width: 1
+  Force Unknown L3 Packet To Specific Egress Queue:
+    Address step: 1
+    End address: 59074
+    Fields:
+    - Default value: 0
+      Description: When set, unknown L3 packet types are forced to a certain egress
+        queue
+      End bit: 0
+      Name: forcePrioQueue
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The egress queue which the packet shall be send to
+      End bit: 3
+      Name: forceQueue
+      Start bit: 1
+      Width: 3
+    Index: address
+    Number of entries: 1
+    Start address: 59074
+    Width: 4
+  Force Untagged VLAN Packet To Specific Egress Queue:
+    Address step: 1
+    End address: 59056
+    Fields:
+    - Default value: 0
+      Description: When set, packets which are non-VLAN tagged are forced to a certain
+        egress queue
+      End bit: 0
+      Name: forcePrioQueue
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The egress queue which the packet shall be send to
+      End bit: 3
+      Name: forceQueue
+      Start bit: 1
+      Width: 3
+    Index: address
+    Number of entries: 1
+    Start address: 59056
+    Width: 4
+  Forward From CPU:
+    Address step: 1
+    End address: 59053
+    Fields:
+    - Default value: 0
+      Description: If this bit is set(=1) then packets from the highest numbered port
+        will be forwarded no matter what the spanning tree status says
+      End bit: 0
+      Name: enable
+      Start bit: 0
+      Width: 1
+    Index: address
+    Number of entries: 1
+    Start address: 59053
+    Width: 1
+  Hash Based L3 Routing Table:
+    Address step: 8
+    End address: 57992
+    Fields:
+    - Default value: 0
+      Description: Is this a IPv4 or a IPv6 Entry. 0 = IPv4 Entry, 1 = IPv6 Entry.
+      End bit: 0
+      Name: ipVersion
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The VRF to be matched for this entry.
+      End bit: 3
+      Name: vrp
+      Start bit: 1
+      Width: 3
+    - Default value: 0
+      Description: The egress router port this packet shall go out on if hit
+      End bit: 6
+      Name: egressVrp
+      Start bit: 4
+      Width: 3
+    - Default value: 0
+      Description: The IP address to be matched. If the entry is a IPv4 entry then
+        only bits [31:0] is used.
+      End bit: 134
+      Name: destIPAddr
+      Start bit: 7
+      Width: 128
+    - Default value: 0
+      Description: The next hop pointer for this destination.
+      End bit: 144
+      Name: nextHopPointer
+      Start bit: 135
+      Width: 10
+    - Default value: 0
+      Description: Include TOS byte to calculate the next hop pointer, 0 = Use TOS,
+        1 = Dont use TOS
+      End bit: 145
+      Name: useECMP
+      Start bit: 145
+      Width: 1
+    - Default value: 0
+      Description: How many bits on the TOS header to used when calculating the ECMP
+        offset. This byte is AND:ed with the TOS byte in the IP header to determine
+        which bits shall be used to affect the final destination next hop address.
+      End bit: 153
+      Name: ecmpMask
+      Start bit: 146
+      Width: 8
+    - Default value: 0
+      Description: Start bit of the masked TOS byte to determine the value of it.
+      End bit: 156
+      Name: ecmpShift
+      Start bit: 154
+      Width: 3
+    Index: Hash of the destination IP
+    Number of entries: 2048
+    Start address: 41609
+    Width: 157
+  IP TOS Field To Egress Queue Mapping Table:
+    Address step: 1
+    End address: 41600
+    Fields:
+    - Default value: 1
+      Description: Egress queue
+      End bit: 2
+      Name: pQueue
+      Start bit: 0
+      Width: 3
+    Index: Incoming IP packets TOS pointer
+    Number of entries: 256
+    Start address: 41345
+    Width: 3
+  Ingress Ethernet Types for VLAN tags:
+    Address step: 1
+    End address: 59057
+    Fields:
+    - Default value: 65535
+      Description: The Ethernet Type value
+      End bit: 15
+      Name: typeValue
+      Start bit: 0
+      Width: 16
+    Index: The VLAN tag number in the packet
+    Number of entries: 1
+    Start address: 59057
+    Width: 16
+  Ingress First ACL Drop:
+    Address step: 1
+    End address: 171
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 171
+    Width: 24
+  Ingress First ACL Match Data Entries:
+    Address step: 4
+    End address: 59176
+    Fields:
+    - Default value: 0
+      Description: For which ports should this filter rule apply.
+      End bit: 11
+      Name: ports
+      Start bit: 0
+      Width: 12
+    - Default value: 1
+      Description: In this acl entry shall the DA Mac address be compared. 1 = include
+        the DA MAC in the comparison, 0 = dont include the DA Mac in the comparison
+      End bit: 12
+      Name: compareDaMac
+      Start bit: 12
+      Width: 1
+    - Default value: 0
+      Description: The Destination MAC address to be compared
+      End bit: 60
+      Name: daMac
+      Start bit: 13
+      Width: 48
+    - Default value: 1
+      Description: In this acl entry shall the Ethernet Type after a potential SVLAN
+        or CCLAN identifier be compared. 1 = include the Ethernet identifier in the
+        comparison, 0 = dont include the Ethernet Type in the comparison
+      End bit: 61
+      Name: compareEthType
+      Start bit: 61
+      Width: 1
+    - Default value: 0
+      Description: The Ethernet type identifier to be compared
+      End bit: 77
+      Name: ethType
+      Start bit: 62
+      Width: 16
+    - Default value: 1
+      Description: In this acl entry shall the first byte after the Ethernet Type
+        be compared. 1 = include the first byte in the comparison, 0 = dont include
+        the first byte in the comparison
+      End bit: 78
+      Name: compareFirstByte
+      Start bit: 78
+      Width: 1
+    - Default value: 0
+      Description: The byte to be compared
+      End bit: 86
+      Name: firstByte
+      Start bit: 79
+      Width: 8
+    Index: address
+    Number of entries: 4
+    Start address: 59161
+    Width: 87
+  Ingress First ACL Result Operation Entries:
+    Address step: 1
+    End address: 59102
+    Fields:
+    - Default value: 0
+      Description: If this acl entry is being hit the packet shall be dropped. 1=
+        Drop, 0 = Dont drop.
+      End bit: 0
+      Name: dropEnable
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If this acl entry comparion is true then the packet is sent to
+        the cpu.
+      End bit: 1
+      Name: sendToCpu
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: The egress packet queue priority which shall be assigned to the
+        packet if the forceEgressPrio field is set
+      End bit: 4
+      Name: forcePrio
+      Start bit: 2
+      Width: 3
+    - Default value: 0
+      Description: If the address was withing the range the packet shall have a forced
+        egress port queue priority. Please see the Egress Queue Priority Selection
+        Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the
+        true path in the diagram, 0 = Assignment of priority according the Matches
+        MAC Range,ACL Miss false path in the diagram
+      End bit: 5
+      Name: forceEgressPrio
+      Start bit: 5
+      Width: 1
+    - Default value: 0
+      Description: Send the packet to a specific port. 1= Send to port, 0 = Dont send.
+      End bit: 6
+      Name: sendToPort
+      Start bit: 6
+      Width: 1
+    - Default value: 0
+      Description: The port which the packet shall be sent to.
+      End bit: 10
+      Name: destPort
+      Start bit: 7
+      Width: 4
+    Index: address
+    Number of entries: 4
+    Start address: 59099
+    Width: 11
+  Ingress L3/L4 ACL Match Data Entries:
+    Address step: 16
+    End address: 59464
+    Fields:
+    - Default value: 0
+      Description: For which source ports should this filter rule apply.
+      End bit: 11
+      Name: ports
+      Start bit: 0
+      Width: 12
+    - Default value: 0
+      Description: Shall the routed bit be compared or not. 1 = Include the Routed
+        bit in the comparison, 0 = Dont include the routed bit in the comparison.
+      End bit: 12
+      Name: compareRouted
+      Start bit: 12
+      Width: 1
+    - Default value: 0
+      Description: 0 = Routed packet, 1 = Not routed
+      End bit: 13
+      Name: routed
+      Start bit: 13
+      Width: 1
+    - Default value: 0
+      Description: Shall the packets VRF be compared or not. 1 = Include the ingress
+        VRF port in the comparison, 0 = Dont include the ingress VRF in the comparison.
+      End bit: 14
+      Name: compareVrp
+      Start bit: 14
+      Width: 1
+    - Default value: 0
+      Description: For which VRF shall this filter rule apply.
+      End bit: 17
+      Name: vrp
+      Start bit: 15
+      Width: 3
+    - Default value: 0
+      Description: Shall the IPv4 packet type be compared. 1 = Include the comparison
+        in the search, 0 = Dont include the comparison in the search
+      End bit: 18
+      Name: compareIPv4
+      Start bit: 18
+      Width: 1
+    - Default value: 0
+      Description: 0 = No IPv4 in the packet, 1 = IPv4 in the packet.
+      End bit: 19
+      Name: isIPv4
+      Start bit: 19
+      Width: 1
+    - Default value: 0
+      Description: Shall the IPv6 packet type be compared. 1 = Include the comparison
+        in the search, 0 = Dont include the comparison in the search
+      End bit: 20
+      Name: compareIPv6
+      Start bit: 20
+      Width: 1
+    - Default value: 0
+      Description: 0 = No IPv6 in the packet, 1 = IPv6 in the packet
+      End bit: 21
+      Name: isIPv6
+      Start bit: 21
+      Width: 1
+    - Default value: 0
+      Description: Shall the MPLS packet type be compared. 1 = Include the comparison
+        in the search, 0 = Dont include the comparison in the search
+      End bit: 22
+      Name: compareMPLS
+      Start bit: 22
+      Width: 1
+    - Default value: 0
+      Description: 0 = No MPLS in the packet, 1= MPLS in the packet
+      End bit: 23
+      Name: isMPLS
+      Start bit: 23
+      Width: 1
+    - Default value: 0
+      Description: Shall the source IPv4 / IPv6 address be compared
+      End bit: 24
+      Name: compareSip
+      Start bit: 24
+      Width: 1
+    - Default value: 0
+      Description: The source address to compare. If IPv4 then only bits [31:0] are
+        compared.
+      End bit: 152
+      Name: sip
+      Start bit: 25
+      Width: 128
+    - Default value: 0
+      Description: Shall the destination IPv4 / IPv6 address be compared.
+      End bit: 153
+      Name: compareDip
+      Start bit: 153
+      Width: 1
+    - Default value: 0
+      Description: The destination address to compare. If IPv4 then only bits [31:0]
+        are compared.
+      End bit: 281
+      Name: dip
+      Start bit: 154
+      Width: 128
+    - Default value: 0
+      Description: Shall the TOS byte be compared
+      End bit: 282
+      Name: compareTos
+      Start bit: 282
+      Width: 1
+    - Default value: 0
+      Description: TOS byte to be compared
+      End bit: 290
+      Name: tos
+      Start bit: 283
+      Width: 8
+    - Default value: 0
+      Description: Shall the L4 payload type byte be compared
+      End bit: 291
+      Name: compareL4Type
+      Start bit: 291
+      Width: 1
+    - Default value: 0
+      Description: The L4 payload byte to be compared.
+      End bit: 299
+      Name: l4Type
+      Start bit: 292
+      Width: 8
+    - Default value: 0
+      Description: Shall the L4 Source Port be compared
+      End bit: 300
+      Name: compareL4sp
+      Start bit: 300
+      Width: 1
+    - Default value: 0
+      Description: The L4 source port to be compared.
+      End bit: 316
+      Name: l4sp
+      Start bit: 301
+      Width: 16
+    - Default value: 0
+      Description: Shall the L4 destination port be compared
+      End bit: 317
+      Name: compareL4dp
+      Start bit: 317
+      Width: 1
+    - Default value: 0
+      Description: The L4 destination port to be compared.
+      End bit: 333
+      Name: l4dp
+      Start bit: 318
+      Width: 16
+    - Default value: 0
+      Description: 'Which of the TCP bits shall be compared. For each bit: 1 = The
+        bit has to match, 0 = The bit is ignored'
+      End bit: 342
+      Name: compareTcpFlagMask
+      Start bit: 334
+      Width: 9
+    - Default value: 0
+      Description: The TCP flags to compare. Bit [8] = ns, Bit [7] = cwr, Bit[6] =
+        ece, Bit[5] = urg, Bit[4] = ack, Bit[3] = psh, Bit [2] = rst, Bit[1] = syn
+        , Bit[0] = fin
+      End bit: 351
+      Name: tcpFlags
+      Start bit: 343
+      Width: 9
+    Index: address
+    Number of entries: 4
+    Start address: 59401
+    Width: 352
+  Ingress L3/L4 ACL Result Operation Entries:
+    Address step: 1
+    End address: 59118
+    Fields:
+    - Default value: 0
+      Description: If this ACL entry is being hit the packet shall be dropped. 1 =
+        Drop, 0 = Do not drop.
+      End bit: 0
+      Name: dropEnable
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If this ACL entry comparion is true then the packet is sent to
+        the CPU.
+      End bit: 1
+      Name: sendToCpu
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: The egress packet queue priority which shall be assigned to the
+        packet if forceEgressPrio field is set
+      End bit: 4
+      Name: forcePrio
+      Start bit: 2
+      Width: 3
+    - Default value: 0
+      Description: If the address was withing the range the packet shall have a forced
+        egress port queue priority. Please see the Egress Queue Priority Selection
+        Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the
+        True path in the diagram, 0 = Assignment of priority according the Matches
+        MAC Range,ACL Miss false path in the diagram
+      End bit: 5
+      Name: forceEgressPrio
+      Start bit: 5
+      Width: 1
+    - Default value: 0
+      Description: Send the packet to a specific port. 1 = Send to port, 0 = Dont
+        send.
+      End bit: 6
+      Name: sendToPort
+      Start bit: 6
+      Width: 1
+    - Default value: 0
+      Description: The port which the packet shall be sent to.
+      End bit: 10
+      Name: destPort
+      Start bit: 7
+      Width: 4
+    Index: address
+    Number of entries: 4
+    Start address: 59115
+    Width: 11
+  Ingress Next Hop Table:
+    Address step: 1
+    End address: 59016
+    Fields:
+    - Default value: 0
+      Description: Is this a L3 multicast or unicast destination. 0 = L3 unicast,
+        1 = L3 multicast
+      End bit: 0
+      Name: l3Mc
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The pointer which to start the readout of \register{Egress L3 Multicast
+        Table}.
+      End bit: 7
+      Name: l3McEntry
+      Start bit: 1
+      Width: 7
+    - Default value: 0
+      Description: The next hop pointer used for egress processing
+      End bit: 14
+      Name: egressNextHop
+      Start bit: 8
+      Width: 7
+    - Default value: 0
+      Description: L2 unicast or multicast. A multicast means that a lookup on \register{L2
+        Multicast Table} will take place. 0 = L2 unicast, 1= L2 multicast.
+      End bit: 15
+      Name: l2Uc
+      Start bit: 15
+      Width: 1
+    - Default value: 0
+      Description: Destination port or pointer into \register{L2 Multicast Table}
+      End bit: 22
+      Name: destPort_or_mcAddr
+      Start bit: 16
+      Width: 7
+    - Default value: 0
+      Description: If set, the packet should be dropped
+      End bit: 23
+      Name: pktDrop
+      Start bit: 23
+      Width: 1
+    Index: Next Hop Pointer
+    Number of entries: 1024
+    Start address: 57993
+    Width: 24
+  Ingress Packet Filtering Drop:
+    Address step: 1
+    End address: 170
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 170
+    Width: 24
+  Ingress Port Packet Type Filter:
+    Address step: 1
+    End address: 59086
+    Fields:
+    - Default value: 0
+      Description: Drop or allow Customer VLANs which as 8100 tagged on this source
+        port. 1 = Drop C-VLAN, 0 = Allow Customer VLANs.
+      End bit: 0
+      Name: dropCtaggedVlans
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow Service VLANs which as 88a8 tagged on this source
+        port. 1 = Drop S-VLAN, 0 = Allow Service VLANs.
+      End bit: 1
+      Name: dropStaggedVlans
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: Drop or Allow packets which are non-VLAN tagged on this source
+        port. 0 = Allow non VLAN tagged packets, 1 = Dont allow non-tagged packets.
+      End bit: 2
+      Name: dropUntaggedVlans
+      Start bit: 2
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv4 packets on this source port. 0 = Allow IPv4,
+        1 = Drop IPv4.
+      End bit: 3
+      Name: dropIPv4Packets
+      Start bit: 3
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv6 packets on this source port. 0 = Allow IPv6,
+        1 = Drop IPv6.
+      End bit: 4
+      Name: dropIPv6Packets
+      Start bit: 4
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow MPLS packets on this source port. 0 = Allow MPLS,
+        1 = Drop MPLS.
+      End bit: 5
+      Name: dropMPLSPackets
+      Start bit: 5
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv4 Multicast packets on this source port. 0 = Allow
+        IPv4 MC, 1 = Drop IPv4 MC packets
+      End bit: 6
+      Name: dropIPv4MulticastPackets
+      Start bit: 6
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow IPv6 Multicast packets on this source port. 0 = Allow
+        IPv6 MC, 1 = Drop IPv6 MC packets
+      End bit: 7
+      Name: dropIPv6MulticastPackets
+      Start bit: 7
+      Width: 1
+    - Default value: 0
+      Description: Drop or allow L2 Broadcast frames on this source port. 0 = Allow
+        L2 Broadcast frames, 1 = Drop L2 Broadcast frames.
+      End bit: 8
+      Name: dropL2BroadcastFrames
+      Start bit: 8
+      Width: 1
+    Index: address
+    Number of entries: 12
+    Start address: 59075
+    Width: 9
+  Ingress Router Table:
+    Address step: 1
+    End address: 41608
+    Fields:
+    - Default value: 0
+      Description: Accept IPv4 packets
+      End bit: 0
+      Name: acceptIPv4
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Accept IPv6 packets
+      End bit: 1
+      Name: acceptIPv6
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: Minimum TTL. TTL below this value will not be accepted
+      End bit: 9
+      Name: minTTL
+      Start bit: 2
+      Width: 8
+    Index: \field{Router Port MAC Address}{vrp}
+    Number of entries: 8
+    Start address: 41601
+    Width: 10
+  Ingress Second ACL Drop:
+    Address step: 1
+    End address: 172
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 172
+    Width: 24
+  Ingress Second ACL Match Data Entries:
+    Address step: 8
+    End address: 59272
+    Fields:
+    - Default value: 0
+      Description: For which ports should this filter rule apply.
+      End bit: 11
+      Name: ports
+      Start bit: 0
+      Width: 12
+    - Default value: 1
+      Description: In this acl entry shall the DA Mac address be compared. 1 = include
+        the DA MAC in the comparison, 0 = dont include the DA Mac in the comparison
+      End bit: 12
+      Name: compareDaMac
+      Start bit: 12
+      Width: 1
+    - Default value: 0
+      Description: The Destination MAC address to be compared
+      End bit: 60
+      Name: daMac
+      Start bit: 13
+      Width: 48
+    - Default value: 1
+      Description: In this acl entry shall the SA Mac address be compared. 1 = include
+        the SA MAC in the comparison, 0 = dont include the SA Mac in the comparison
+      End bit: 61
+      Name: compareSaMac
+      Start bit: 61
+      Width: 1
+    - Default value: 0
+      Description: The source MAC address to be compared
+      End bit: 109
+      Name: saMac
+      Start bit: 62
+      Width: 48
+    - Default value: 1
+      Description: In this acl entry shall the Ethernet Type after a potential SVLAN
+        or CCLAN identifier be compared. 1 = include the Ethernet identifier in the
+        comparison, 0 = dont include the Ethernet Type in the comparison
+      End bit: 110
+      Name: compareEthType
+      Start bit: 110
+      Width: 1
+    - Default value: 0
+      Description: The Ethernet type identifier to be compared
+      End bit: 126
+      Name: ethType
+      Start bit: 111
+      Width: 16
+    - Default value: 1
+      Description: In this acl entry shall the first byte after the Ethernet Type
+        be compared. 1 = include the first byte in the comparison, 0 = dont include
+        the first byte in the comparison
+      End bit: 127
+      Name: compareFirstByte
+      Start bit: 127
+      Width: 1
+    - Default value: 0
+      Description: The byte to be compared
+      End bit: 135
+      Name: firstByte
+      Start bit: 128
+      Width: 8
+    Index: address
+    Number of entries: 4
+    Start address: 59241
+    Width: 136
+  Ingress Second ACL Result Operation Entries:
+    Address step: 1
+    End address: 59106
+    Fields:
+    - Default value: 0
+      Description: If this acl entry is being hit the packet shall be dropped. 1=
+        Drop, 0 = Dont drop.
+      End bit: 0
+      Name: dropEnable
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If this acl entry comparion is true then the packet is sent to
+        the cpu.
+      End bit: 1
+      Name: sendToCpu
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: The egress packet queue priority which shall be assigned to the
+        packet if the forceEgressPrio field is set
+      End bit: 4
+      Name: forcePrio
+      Start bit: 2
+      Width: 3
+    - Default value: 0
+      Description: If the address was withing the range the packet shall have a forced
+        egress port queue priority. Please see the Egress Queue Priority Selection
+        Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the
+        true path in the diagram, 0 = Assignment of priority according the Matches
+        MAC Range,ACL Miss false path in the diagram
+      End bit: 5
+      Name: forceEgressPrio
+      Start bit: 5
+      Width: 1
+    - Default value: 0
+      Description: Send the packet to a specific port. 1= Send to port, 0 = Dont send.
+      End bit: 6
+      Name: sendToPort
+      Start bit: 6
+      Width: 1
+    - Default value: 0
+      Description: The port which the packet shall be sent to.
+      End bit: 10
+      Name: destPort
+      Start bit: 7
+      Width: 4
+    Index: address
+    Number of entries: 4
+    Start address: 59103
+    Width: 11
+  'Ingress Spanning Tree Drop: Blocking':
+    Address step: 1
+    End address: 181
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 181
+    Width: 24
+  'Ingress Spanning Tree Drop: Learning':
+    Address step: 1
+    End address: 180
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 180
+    Width: 24
+  'Ingress Spanning Tree Drop: Listen':
+    Address step: 1
+    End address: 179
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 179
+    Width: 24
+  Invalid Routing Protocol Drop:
+    Address step: 1
+    End address: 165
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 165
+    Width: 24
+  L2 Aging Collision Table:
+    Address step: 1
+    End address: 59073
+    Fields:
+    - Default value: 0
+      Description: If this is set(=1) then this entry is valid
+      End bit: 0
+      Name: valid
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If this is set(=1) then this entry will not be aged out
+      End bit: 1
+      Name: stat
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: If set then this entry has been looked up during the age time
+      End bit: 2
+      Name: hit
+      Start bit: 2
+      Width: 1
+    Index: Address
+    Number of entries: 16
+    Start address: 59058
+    Width: 3
+  L2 Aging Table:
+    Address step: 1
+    End address: 37240
+    Fields:
+    - Default value: 0
+      Description: If this is set(=1) then this entry is valid
+      End bit: 0
+      Name: valid
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If this is set(=1) then this entry will not be aged out
+      End bit: 1
+      Name: stat
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: If set then this entry has been looked up during the age time
+      End bit: 2
+      Name: hit
+      Start bit: 2
+      Width: 1
+    Index: Destination MAC Address hashing result
+    Number of entries: 4096
+    Start address: 33145
+    Width: 3
+  L2 Aging Table - Replica:
+    Address step: 1
+    End address: 41336
+    Fields:
+    - Default value: 0
+      Description: If this is set(=1) then this entry is valid
+      End bit: 0
+      Name: valid
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If this is set(=1) then this entry will not be aged out
+      End bit: 1
+      Name: stat
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: If set then this entry has been looked up during the age time
+      End bit: 2
+      Name: hit
+      Start bit: 2
+      Width: 1
+    Index: Source MAC Address hashing result
+    Number of entries: 4096
+    Start address: 37241
+    Width: 3
+  L2 DA Hash Lookup Table:
+    Address step: 2
+    End address: 16728
+    Fields:
+    - Default value: 0
+      Description: MAC address
+      End bit: 47
+      Name: macAddr
+      Start bit: 0
+      Width: 48
+    - Default value: 0
+      Description: Global identifier for learning
+      End bit: 59
+      Name: gid
+      Start bit: 48
+      Width: 12
+    Index: Hash address
+    Number of entries: 4096
+    Start address: 8537
+    Width: 60
+  L2 Destination Table:
+    Address step: 1
+    End address: 29032
+    Fields:
+    - Default value: 0
+      Description: Unicast if set (=1), multicast if cleared (=0). A multicast means
+        that a lookup on L2 Multicast Table will take place.
+      End bit: 0
+      Name: uc
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Destination port or pointer into L2 Multicast Table
+      End bit: 7
+      Name: destPort_or_mcAddr
+      Start bit: 1
+      Width: 7
+    - Default value: 0
+      Description: If set, the packet should be dropped
+      End bit: 8
+      Name: pktDrop
+      Start bit: 8
+      Width: 1
+    Index: L2 DA Hash Table lookup result
+    Number of entries: 4112
+    Start address: 24921
+    Width: 9
+  L2 Destination Table - Replica:
+    Address step: 1
+    End address: 33144
+    Fields:
+    - Default value: 0
+      Description: Unicast if set (=1), multicast if cleared (=0). A multicast means
+        that a lookup on L2 Multicast Table will take place.
+      End bit: 0
+      Name: uc
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: Destination port or pointer into L2 Multicast Table
+      End bit: 7
+      Name: destPort_or_mcAddr
+      Start bit: 1
+      Width: 7
+    - Default value: 0
+      Description: If set, the packet should be dropped
+      End bit: 8
+      Name: pktDrop
+      Start bit: 8
+      Width: 1
+    Index: L2 SA Hash Table lookup result
+    Number of entries: 4112
+    Start address: 29033
+    Width: 9
+  L2 Flag Drop:
+    Address step: 1
+    End address: 174
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 174
+    Width: 24
+  L2 Lookup Collision Table:
+    Address step: 2
+    End address: 59152
+    Fields:
+    - Default value: 0
+      Description: MAC address
+      End bit: 47
+      Name: macAddr
+      Start bit: 0
+      Width: 48
+    - Default value: 0
+      Description: Global identifier for learning
+      End bit: 59
+      Name: gid
+      Start bit: 48
+      Width: 12
+    Index: Address
+    Number of entries: 16
+    Start address: 59121
+    Width: 60
+  L2 Multicast Table:
+    Address step: 1
+    End address: 8536
+    Fields:
+    - Default value: 4095
+      Description: L2 portmask entry members. If set the port is part of multicast
+        group and shall be transmitted to.
+      End bit: 11
+      Name: mcPortMask
+      Start bit: 0
+      Width: 12
+    Index: mcAddr field from L2 Destination Table
+    Number of entries: 128
+    Start address: 8409
+    Width: 12
+  L2 SA Hash Lookup Table:
+    Address step: 2
+    End address: 24920
+    Fields:
+    - Default value: 0
+      Description: MAC address
+      End bit: 47
+      Name: macAddr
+      Start bit: 0
+      Width: 48
+    - Default value: 0
+      Description: Global identifier for learning
+      End bit: 59
+      Name: gid
+      Start bit: 48
+      Width: 12
+    Index: Hash address
+    Number of entries: 4096
+    Start address: 16729
+    Width: 60
+  L3 ACL Drop:
+    Address step: 1
+    End address: 168
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 168
+    Width: 24
+  L3 Lookup Drop:
+    Address step: 1
+    End address: 167
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 167
+    Width: 24
+  L3 Multicast Drop:
+    Address step: 1
+    End address: 59589
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 59589
+    Width: 24
+  L3 Routing Default:
+    Address step: 1
+    End address: 59114
+    Fields:
+    - Default value: 0
+      Description: The default next hop to be used.
+      End bit: 9
+      Name: nextHop
+      Start bit: 0
+      Width: 10
+    - Default value: 0
+      Description: The egress router port this packet shall go out on.
+      End bit: 12
+      Name: egressVrp
+      Start bit: 10
+      Width: 3
+    - Default value: 0
+      Description: ' Drop the packet'
+      End bit: 13
+      Name: pktDrop
+      Start bit: 13
+      Width: 1
+    Index: \field{Router Port MAC Address}{vrp}
+    Number of entries: 8
+    Start address: 59107
+    Width: 14
+  L3 Routing TCAM:
+    Address step: 16
+    End address: 59400
+    Fields:
+    - Default value: 0
+      Description: Is this a IPv4 or a IPv6 Entry. 0 = IPv4 Entry, 1 = IPv6 Entry.
+      End bit: 0
+      Name: ipVersion
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The VRF to be matched for this entry.
+      End bit: 3
+      Name: vrp
+      Start bit: 1
+      Width: 3
+    - Default value: 0
+      Description: The egress router port this packet shall go out on if hit
+      End bit: 6
+      Name: egressVrp
+      Start bit: 4
+      Width: 3
+    - Default value: 0
+      Description: The IP address to be matched. If the entry is a IPv4 entry then
+        only bits [31:0] is used.
+      End bit: 134
+      Name: destIPAddr
+      Start bit: 7
+      Width: 128
+    - Default value: 340282366920938463463374607431768211455
+      Description: Each bit says if the bit in the destination IP address shall be
+        compared. 0 = Dont compare bit, 1 = Compare bit
+      End bit: 262
+      Name: mask
+      Start bit: 135
+      Width: 128
+    - Default value: 0
+      Description: The next hop pointer for this destination
+      End bit: 272
+      Name: nextHopPointer
+      Start bit: 263
+      Width: 10
+    - Default value: 0
+      Description: Include TOS byte to calculate the next hop pointer, 0 = Use TOS,
+        1 = Dont use TOS
+      End bit: 273
+      Name: useECMP
+      Start bit: 273
+      Width: 1
+    - Default value: 0
+      Description: How many bits on the TOS header to used when calculating the ECMP
+        offset. This byte is AND:ed with the TOS byte in the IP header to determine
+        which bits shall be used to affect the final destination next hop address.
+      End bit: 281
+      Name: ecmpMask
+      Start bit: 274
+      Width: 8
+    - Default value: 0
+      Description: Start bit of the masked TOS byte to determine the value of it.
+      End bit: 284
+      Name: ecmpShift
+      Start bit: 282
+      Width: 3
+    Index: Entry number
+    Number of entries: 8
+    Start address: 59273
+    Width: 285
+  Learning And Aging Software Control:
+    Address step: 1
+    End address: 60032
+    Fields:
+    - Default value: 1
+      Description: If set, the learning engine will be activated
+      End bit: 0
+      Name: learningEnable
+      Start bit: 0
+      Width: 1
+    - Default value: 1
+      Description: If set, the aging engine will be activated
+      End bit: 1
+      Name: agingEnable
+      Start bit: 1
+      Width: 1
+    Number of entries: 1
+    Start address: 60032
+    Width: 2
+  'Long Packet Counter: RX 0':
+    Address step: 1
+    End address: 18
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 18
+    Width: 24
+  'Long Packet Counter: RX 1':
+    Address step: 1
+    End address: 24
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 24
+    Width: 24
+  'Long Packet Counter: RX 10':
+    Address step: 1
+    End address: 78
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 78
+    Width: 24
+  'Long Packet Counter: RX 11':
+    Address step: 1
+    End address: 84
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 84
+    Width: 24
+  'Long Packet Counter: RX 2':
+    Address step: 1
+    End address: 30
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 30
+    Width: 24
+  'Long Packet Counter: RX 3':
+    Address step: 1
+    End address: 36
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 36
+    Width: 24
+  'Long Packet Counter: RX 4':
+    Address step: 1
+    End address: 42
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 42
+    Width: 24
+  'Long Packet Counter: RX 5':
+    Address step: 1
+    End address: 48
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 48
+    Width: 24
+  'Long Packet Counter: RX 6':
+    Address step: 1
+    End address: 54
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 54
+    Width: 24
+  'Long Packet Counter: RX 7':
+    Address step: 1
+    End address: 60
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 60
+    Width: 24
+  'Long Packet Counter: RX 8':
+    Address step: 1
+    End address: 66
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 66
+    Width: 24
+  'Long Packet Counter: RX 9':
+    Address step: 1
+    End address: 72
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 72
+    Width: 24
+  'Long Packet Counter: TX 0':
+    Address step: 1
+    End address: 21
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 21
+    Width: 24
+  'Long Packet Counter: TX 1':
+    Address step: 1
+    End address: 27
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 27
+    Width: 24
+  'Long Packet Counter: TX 10':
+    Address step: 1
+    End address: 81
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 81
+    Width: 24
+  'Long Packet Counter: TX 11':
+    Address step: 1
+    End address: 87
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 87
+    Width: 24
+  'Long Packet Counter: TX 2':
+    Address step: 1
+    End address: 33
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 33
+    Width: 24
+  'Long Packet Counter: TX 3':
+    Address step: 1
+    End address: 39
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 39
+    Width: 24
+  'Long Packet Counter: TX 4':
+    Address step: 1
+    End address: 45
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 45
+    Width: 24
+  'Long Packet Counter: TX 5':
+    Address step: 1
+    End address: 51
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 51
+    Width: 24
+  'Long Packet Counter: TX 6':
+    Address step: 1
+    End address: 57
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 57
+    Width: 24
+  'Long Packet Counter: TX 7':
+    Address step: 1
+    End address: 63
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 63
+    Width: 24
+  'Long Packet Counter: TX 8':
+    Address step: 1
+    End address: 69
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 69
+    Width: 24
+  'Long Packet Counter: TX 9':
+    Address step: 1
+    End address: 75
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 75
+    Width: 24
+  Low TTL Drop:
+    Address step: 1
+    End address: 166
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 166
+    Width: 24
+  MBSC Configuration:
+    Address step: 4
+    End address: 135
+    Fields:
+    - Default value: 288
+      Description: Capacity of token bucket for this port
+      End bit: 23
+      Name: bucketCapacity
+      Start bit: 0
+      Width: 24
+    - Default value: 278
+      Description: Initial number of tokens
+      End bit: 47
+      Name: initialSize
+      Start bit: 24
+      Width: 24
+    - Default value: 1
+      Description: Tokens will be counted in Bytes/Packets(0/1)
+      End bit: 48
+      Name: packetOrBytes
+      Start bit: 48
+      Width: 1
+    - Default value: 10
+      Description: Token input rate for bucket
+      End bit: 72
+      Name: tokenIn
+      Start bit: 49
+      Width: 24
+    - Default value: 1050
+      Description: Time period, in clock cycles, after which tokens are added to bucket.
+      End bit: 96
+      Name: cyclesIn
+      Start bit: 73
+      Width: 24
+    - Default value: 278
+      Description: Minimum number of tokens in bucket to continue transmission.
+      End bit: 120
+      Name: minTokens
+      Start bit: 97
+      Width: 24
+    Index: Egress port
+    Number of entries: 12
+    Start address: 88
+    Width: 121
+  MBSC Current Size:
+    Address step: 1
+    End address: 147
+    Fields:
+    - Default value: 0
+      Description: Number of tokens currently in the token bucket for this port
+      End bit: 23
+      Name: currentSize
+      Start bit: 0
+      Width: 24
+    Index: Egress port
+    Number of entries: 12
+    Start address: 136
+    Width: 24
+  MBSC Enable:
+    Address step: 1
+    End address: 148
+    Fields:
+    - Default value: 0
+      Description: Bitmask where each index corresponds to respective port
+      End bit: 11
+      Name: enable
+      Start bit: 0
+      Width: 12
+    Number of entries: 1
+    Start address: 148
+    Width: 12
+  MBSC Status:
+    Address step: 1
+    End address: 149
+    Fields:
+    - Default value: 4095
+      Description: Storm Control output
+      End bit: 11
+      Name: STAT
+      Start bit: 0
+      Width: 12
+    Number of entries: 1
+    Start address: 149
+    Width: 12
+  MPLS Exp Field To Egress Queue Mapping Table:
+    Address step: 1
+    End address: 41344
+    Fields:
+    - Default value: 1
+      Description: Egress queue
+      End bit: 2
+      Name: pQueue
+      Start bit: 0
+      Width: 3
+    Index: Incoming packets MPLS EXP priority bits
+    Number of entries: 8
+    Start address: 41337
+    Width: 3
+  Maximum Allowed VLAN Drop:
+    Address step: 1
+    End address: 184
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 184
+    Width: 24
+  Minimum Allowed VLAN Drop:
+    Address step: 1
+    End address: 183
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 183
+    Width: 24
+  Multicast Occupancy Limit:
+    Address step: 1
+    End address: 59052
+    Fields:
+    - Default value: 69
+      Description: The maximum number of cells in the buffer memory that can be occupid
+        by multicast packets with a certain queue
+      End bit: 10
+      Name: cells
+      Start bit: 0
+      Width: 11
+    Index: Egress queue
+    Number of entries: 8
+    Start address: 59045
+    Width: 11
+  Multicast Overuse Drop:
+    Address step: 1
+    End address: 178
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 178
+    Width: 24
+  Output Disable:
+    Address step: 1
+    End address: 59476
+    Fields:
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 0 on
+        this egress port
+      End bit: 0
+      Name: egressQueue0Disabled
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 1 on
+        this egress port
+      End bit: 1
+      Name: egressQueue1Disabled
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 2 on
+        this egress port
+      End bit: 2
+      Name: egressQueue2Disabled
+      Start bit: 2
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 3 on
+        this egress port
+      End bit: 3
+      Name: egressQueue3Disabled
+      Start bit: 3
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 4 on
+        this egress port
+      End bit: 4
+      Name: egressQueue4Disabled
+      Start bit: 4
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 5 on
+        this egress port
+      End bit: 5
+      Name: egressQueue5Disabled
+      Start bit: 5
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 6 on
+        this egress port
+      End bit: 6
+      Name: egressQueue6Disabled
+      Start bit: 6
+      Width: 1
+    - Default value: 0
+      Description: If set, stop scheduling new packets for output from queue 7 on
+        this egress port
+      End bit: 7
+      Name: egressQueue7Disabled
+      Start bit: 7
+      Width: 1
+    Index: Egress port
+    Number of entries: 12
+    Start address: 59465
+    Width: 8
+  'Packet Length Reference: RX 0':
+    Address step: 1
+    End address: 16
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 16
+    Width: 24
+  'Packet Length Reference: RX 1':
+    Address step: 1
+    End address: 22
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 22
+    Width: 24
+  'Packet Length Reference: RX 10':
+    Address step: 1
+    End address: 76
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 76
+    Width: 24
+  'Packet Length Reference: RX 11':
+    Address step: 1
+    End address: 82
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 82
+    Width: 24
+  'Packet Length Reference: RX 2':
+    Address step: 1
+    End address: 28
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 28
+    Width: 24
+  'Packet Length Reference: RX 3':
+    Address step: 1
+    End address: 34
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 34
+    Width: 24
+  'Packet Length Reference: RX 4':
+    Address step: 1
+    End address: 40
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 40
+    Width: 24
+  'Packet Length Reference: RX 5':
+    Address step: 1
+    End address: 46
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 46
+    Width: 24
+  'Packet Length Reference: RX 6':
+    Address step: 1
+    End address: 52
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 52
+    Width: 24
+  'Packet Length Reference: RX 7':
+    Address step: 1
+    End address: 58
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 58
+    Width: 24
+  'Packet Length Reference: RX 8':
+    Address step: 1
+    End address: 64
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 64
+    Width: 24
+  'Packet Length Reference: RX 9':
+    Address step: 1
+    End address: 70
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 70
+    Width: 24
+  'Packet Length Reference: TX 0':
+    Address step: 1
+    End address: 19
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 19
+    Width: 24
+  'Packet Length Reference: TX 1':
+    Address step: 1
+    End address: 25
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 25
+    Width: 24
+  'Packet Length Reference: TX 10':
+    Address step: 1
+    End address: 79
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 79
+    Width: 24
+  'Packet Length Reference: TX 11':
+    Address step: 1
+    End address: 85
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 85
+    Width: 24
+  'Packet Length Reference: TX 2':
+    Address step: 1
+    End address: 31
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 31
+    Width: 24
+  'Packet Length Reference: TX 3':
+    Address step: 1
+    End address: 37
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 37
+    Width: 24
+  'Packet Length Reference: TX 4':
+    Address step: 1
+    End address: 43
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 43
+    Width: 24
+  'Packet Length Reference: TX 5':
+    Address step: 1
+    End address: 49
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 49
+    Width: 24
+  'Packet Length Reference: TX 6':
+    Address step: 1
+    End address: 55
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 55
+    Width: 24
+  'Packet Length Reference: TX 7':
+    Address step: 1
+    End address: 61
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 61
+    Width: 24
+  'Packet Length Reference: TX 8':
+    Address step: 1
+    End address: 67
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 67
+    Width: 24
+  'Packet Length Reference: TX 9':
+    Address step: 1
+    End address: 73
+    Fields:
+    - Default value: 60
+      Description: Number of bytes
+      End bit: 23
+      Name: bytes
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 73
+    Width: 24
+  Packet counter latch:
+    Address step: 1
+    End address: 2
+    Fields:
+    - Default value: 0
+      Description: When set to one the packet counter registers will be syncronously
+        updated. The enable bit is then cleared.
+      End bit: 0
+      Name: enable
+      Start bit: 0
+      Width: 1
+    Number of entries: 1
+    Start address: 2
+    Width: 1
+  Redirect:
+    Address step: 1
+    End address: 59479
+    Fields:
+    - Default value: 0
+      Description: If set, redirect is enabled
+      End bit: 0
+      Name: redirectEnabled
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The egress port that redirect from
+      End bit: 4
+      Name: fromEgressPort
+      Start bit: 1
+      Width: 4
+    - Default value: 0
+      Description: The egress port that redirect to. Only valid if redirectEnabled
+        is set
+      End bit: 8
+      Name: toEgressPort
+      Start bit: 5
+      Width: 4
+    Number of entries: 1
+    Start address: 59479
+    Width: 9
+  Reserved Destination MAC Address Range:
+    Address step: 4
+    End address: 59160
+    Fields:
+    - Default value: 0
+      Description: Enable the reserved DA check per source port. If a bit is set to
+        one, the reserved mac DA range is activated for that source port
+      End bit: 11
+      Name: enable
+      Start bit: 0
+      Width: 12
+    - Default value: 0
+      Description: The reserved mac start address to compare destination addresses
+        to
+      End bit: 59
+      Name: startAddr
+      Start bit: 12
+      Width: 48
+    - Default value: 0
+      Description: The reserved mac end address to compare destination addresses to
+      End bit: 107
+      Name: stopAddr
+      Start bit: 60
+      Width: 48
+    - Default value: 0
+      Description: If the address was within the range the packet shall be dropped.
+      End bit: 108
+      Name: dropEnable
+      Start bit: 108
+      Width: 1
+    - Default value: 0
+      Description: If the address was within the range the packet shall be sent to
+        the cpu
+      End bit: 109
+      Name: sendToCpu
+      Start bit: 109
+      Width: 1
+    - Default value: 0
+      Description: If the address was withing the range the packet shall have a forced
+        egress port queue priority. Please see the Egress Queue Priority Selection
+        Diagram \ref{fig:determineEgressQueue}, 1 = Force priority according to the
+        true path in the diagram, 0 = Assignment of priority according the Matches
+        MAC Range false path in the diagram
+      End bit: 110
+      Name: forceEgressPrio
+      Start bit: 110
+      Width: 1
+    - Default value: 0
+      Description: The egress packet queue priority which shall be assigned to the
+        packet if the force egress port priority is set
+      End bit: 113
+      Name: forcePrio
+      Start bit: 111
+      Width: 3
+    Index: address
+    Number of entries: 2
+    Start address: 59153
+    Width: 114
+  Reserved MAC Address Drop:
+    Address step: 1
+    End address: 175
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 175
+    Width: 24
+  Router Port MAC Address:
+    Address step: 4
+    End address: 59240
+    Fields:
+    - Default value: 0
+      Description: The base DA MAC address which is used to get to the router
+      End bit: 47
+      Name: macAddress
+      Start bit: 0
+      Width: 48
+    - Default value: 281474976710655
+      Description: Each bit says if the bit in the DA MAC shall be compared. 0 = Dont
+        compare bit, 1 = Compare bit
+      End bit: 95
+      Name: macMask
+      Start bit: 48
+      Width: 48
+    - Default value: 0
+      Description: If set, this entry is valid for comparison
+      End bit: 96
+      Name: valid
+      Start bit: 96
+      Width: 1
+    - Default value: 0
+      Description: VRF for this MAC address
+      End bit: 99
+      Name: vrp
+      Start bit: 97
+      Width: 3
+    Index: address
+    Number of entries: 16
+    Start address: 59177
+    Width: 100
+  Send to CPU:
+    Address step: 2
+    End address: 59120
+    Fields:
+    - Default value: 1
+      Description: If set, then packets which have the Destination MAC Address equals
+        to 01:80:C2:00:00:00 will be sent to the CPU port
+      End bit: 0
+      Name: allowBpdu
+      Start bit: 0
+      Width: 1
+    - Default value: 1
+      Description: If set, then packets which have the Destination MAC Address equals
+        to 01:00:0C:CC:CC:CD will be sent to the CPU port
+      End bit: 1
+      Name: allowRstBpdu
+      Start bit: 1
+      Width: 1
+    - Default value: 0
+      Description: If set, unicast packets can be sent to the CPU port only when the
+        Destination MAC Address equals the customized CPU MAC address
+      End bit: 2
+      Name: uniqueCpuMac
+      Start bit: 2
+      Width: 1
+    - Default value: 0
+      Description: 'The customized CPU MAC address, only valid if uniqueCpuMAC is
+        set(=1) '
+      End bit: 50
+      Name: cpuMacAddr
+      Start bit: 3
+      Width: 48
+    Index: address
+    Number of entries: 1
+    Start address: 59119
+    Width: 51
+  Serial to Parallel Broken Drop:
+    Address step: 1
+    End address: 164
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 31
+      Name: packets
+      Start bit: 0
+      Width: 32
+    Index: ''
+    Number of entries: 3
+    Start address: 162
+    Width: 32
+  Serial to Parallel Overflow Drop:
+    Address step: 1
+    End address: 161
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets on this ingress port
+      End bit: 31
+      Name: packets
+      Start bit: 0
+      Width: 32
+    Index: Ingress port
+    Number of entries: 12
+    Start address: 150
+    Width: 32
+  'Short Packet Counter: RX 0':
+    Address step: 1
+    End address: 17
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 17
+    Width: 24
+  'Short Packet Counter: RX 1':
+    Address step: 1
+    End address: 23
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 23
+    Width: 24
+  'Short Packet Counter: RX 10':
+    Address step: 1
+    End address: 77
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 77
+    Width: 24
+  'Short Packet Counter: RX 11':
+    Address step: 1
+    End address: 83
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 83
+    Width: 24
+  'Short Packet Counter: RX 2':
+    Address step: 1
+    End address: 29
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 29
+    Width: 24
+  'Short Packet Counter: RX 3':
+    Address step: 1
+    End address: 35
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 35
+    Width: 24
+  'Short Packet Counter: RX 4':
+    Address step: 1
+    End address: 41
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 41
+    Width: 24
+  'Short Packet Counter: RX 5':
+    Address step: 1
+    End address: 47
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 47
+    Width: 24
+  'Short Packet Counter: RX 6':
+    Address step: 1
+    End address: 53
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 53
+    Width: 24
+  'Short Packet Counter: RX 7':
+    Address step: 1
+    End address: 59
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 59
+    Width: 24
+  'Short Packet Counter: RX 8':
+    Address step: 1
+    End address: 65
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 65
+    Width: 24
+  'Short Packet Counter: RX 9':
+    Address step: 1
+    End address: 71
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 71
+    Width: 24
+  'Short Packet Counter: TX 0':
+    Address step: 1
+    End address: 20
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 20
+    Width: 24
+  'Short Packet Counter: TX 1':
+    Address step: 1
+    End address: 26
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 26
+    Width: 24
+  'Short Packet Counter: TX 10':
+    Address step: 1
+    End address: 80
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 80
+    Width: 24
+  'Short Packet Counter: TX 11':
+    Address step: 1
+    End address: 86
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 86
+    Width: 24
+  'Short Packet Counter: TX 2':
+    Address step: 1
+    End address: 32
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 32
+    Width: 24
+  'Short Packet Counter: TX 3':
+    Address step: 1
+    End address: 38
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 38
+    Width: 24
+  'Short Packet Counter: TX 4':
+    Address step: 1
+    End address: 44
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 44
+    Width: 24
+  'Short Packet Counter: TX 5':
+    Address step: 1
+    End address: 50
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 50
+    Width: 24
+  'Short Packet Counter: TX 6':
+    Address step: 1
+    End address: 56
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 56
+    Width: 24
+  'Short Packet Counter: TX 7':
+    Address step: 1
+    End address: 62
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 62
+    Width: 24
+  'Short Packet Counter: TX 8':
+    Address step: 1
+    End address: 68
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 68
+    Width: 24
+  'Short Packet Counter: TX 9':
+    Address step: 1
+    End address: 74
+    Fields:
+    - Default value: 0
+      Description: Number of packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 74
+    Width: 24
+  Source Port Table:
+    Address step: 2
+    End address: 208
+    Fields:
+    - Default value: 0
+      Description: If set, choose the priority from Layer 3 decoding
+      End bit: 0
+      Name: prioFromL3
+      Start bit: 0
+      Width: 1
+    - Default value: 0
+      Description: The source port VLAN operation to do on the packet. 0 = no operation,
+        1 = swap, 2 = push, 3 = pop, 4 = penultimate Pop(remove all headers)
+      End bit: 3
+      Name: vlanSingleOp
+      Start bit: 1
+      Width: 3
+    - Default value: 0
+      Description: Where shall the vid come from during source port VLAN operations.
+        0 = from outmost VLAN in the packet (if any), 1 = from Source Port Table,
+        2 = from Virtual Port tag (if any)
+      End bit: 5
+      Name: vidSel
+      Start bit: 4
+      Width: 2
+    - Default value: 0
+      Description: Where shall the cfi/dei come from during source port VLAN operations.
+        0 = from outmost VLAN in the packet, 1 = from Source Port Table
+      End bit: 7
+      Name: cfiDeiSel
+      Start bit: 6
+      Width: 2
+    - Default value: 0
+      Description: Where shall the pcp come from during source port VLAN operations.
+        0 = from outmost VLAN in the packet, 1 = from Source Port Table
+      End bit: 9
+      Name: pcpSel
+      Start bit: 8
+      Width: 2
+    - Default value: 0
+      Description: Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = user defined
+        VLAN
+      End bit: 11
+      Name: typeSel
+      Start bit: 10
+      Width: 2
+    - Default value: 0
+      Description: How shall a packet VLAN be assigned. Packet based (=0) the vlan
+        id is assigned from the incoming packet or port-based (=1) then the packets
+        vid is assigned from the source ports defaultVid, defaultPcp and defaultCfiDei
+        fields
+      End bit: 12
+      Name: vlanAssignment
+      Start bit: 12
+      Width: 1
+    - Default value: 0
+      Description: The default virtual lan id. Either because a non-VLAN tagget packet
+        or because VLAN assignment is based on the port.
+      End bit: 24
+      Name: defaultVid
+      Start bit: 13
+      Width: 12
+    - Default value: 0
+      Description: The default cfi / dei bit in the VLAN header if port based VLAN
+        is choosen
+      End bit: 25
+      Name: defaultCfiDei
+      Start bit: 25
+      Width: 1
+    - Default value: 0
+      Description: The default pcp bits in the VLAN header if port based VLAN is choosen
+      End bit: 28
+      Name: defaultPcp
+      Start bit: 26
+      Width: 3
+    - Default value: 0
+      Description: The default Ethernet Type field the port assigned VLAN shall appear
+        to be using.
+      End bit: 44
+      Name: defaultEthType
+      Start bit: 29
+      Width: 16
+    - Default value: 0
+      Description: The default priority which a non-VLAN marked packet will get
+      End bit: 47
+      Name: defaultPrio
+      Start bit: 45
+      Width: 3
+    - Default value: 0
+      Description: The minimum number of VLANs a packet needs to have to be allowed
+        on this port
+      End bit: 50
+      Name: minAllowedVlans
+      Start bit: 48
+      Width: 3
+    - Default value: 4
+      Description: The maximum number of VLANs a packet needs to have to be allowed
+        in this port
+      End bit: 53
+      Name: maxAllowedVlans
+      Start bit: 51
+      Width: 3
+    - Default value: 0
+      Description: The spanning tree state for this ingress port. 0 = disabled/forwarding,
+        1 = blocking, 2 = listening, 3 = learning
+      End bit: 55
+      Name: spt
+      Start bit: 54
+      Width: 2
+    Index: Ingress port
+    Number of entries: 12
+    Start address: 185
+    Width: 56
+  Time to Age:
+    Address step: 1
+    End address: 60033
+    Fields:
+    - Default value: 4294967295
+      Description: Cycles after which aging should kick in.
+      End bit: 31
+      Name: cycles
+      Start bit: 0
+      Width: 32
+    Number of entries: 1
+    Start address: 60033
+    Width: 32
+  Unicast Occupancy Limit:
+    Address step: 1
+    End address: 59044
+    Fields:
+    - Default value: 93
+      Description: The maximum number of cells in the buffer memory that can be occupied
+        by packets destined for an egress port with a certain queue
+      End bit: 10
+      Name: cells
+      Start bit: 0
+      Width: 11
+    Index: Egress queue
+    Number of entries: 8
+    Start address: 59037
+    Width: 11
+  VLAN Member Drop:
+    Address step: 1
+    End address: 182
+    Fields:
+    - Default value: 0
+      Description: The number of dropped packets
+      End bit: 23
+      Name: packets
+      Start bit: 0
+      Width: 24
+    Number of entries: 1
+    Start address: 182
+    Width: 24
+  VLAN PCP To Egress Queue Mapping Table:
+    Address step: 1
+    End address: 8408
+    Fields:
+    - Default value: 1
+      Description: Egress queue
+      End bit: 2
+      Name: pQueue
+      Start bit: 0
+      Width: 3
+    Index: Incoming packets VLAN priority bits
+    Number of entries: 8
+    Start address: 8401
+    Width: 3
+  VLAN Table:
+    Address step: 2
+    End address: 8400
+    Fields:
+    - Default value: 4095
+      Description: Membership portmask
+      End bit: 11
+      Name: vlanPortMask
+      Start bit: 0
+      Width: 12
+    - Default value: 0
+      Description: Global Identifier used in L2 lookup
+      End bit: 23
+      Name: gid
+      Start bit: 12
+      Width: 12
+    - Default value: 0
+      Description: The ingress VLAN operation to do on the packet. 0 = no operation,
+        1 = swap, 2 = push, 3 = pop, 4 = penultimate Pop(remove all headers).
+      End bit: 26
+      Name: vlanSingleOp
+      Start bit: 24
+      Width: 3
+    - Default value: 0
+      Description: Where shall the vid come from during ingress VLAN operations. 0
+        = from outmost VLAN in the packet, 1 = from VLAN Table
+      End bit: 28
+      Name: vidSel
+      Start bit: 27
+      Width: 2
+    - Default value: 0
+      Description: Where shall the cfi/dei come from during ingress VLAN operations,
+        0 = from outmost VLAN in the packet, 1 = from VLAN Table
+      End bit: 30
+      Name: cfiDeiSel
+      Start bit: 29
+      Width: 2
+    - Default value: 0
+      Description: Where shall the pcp come from during ingress VLAN operations, 0
+        = from outmost VLAN in the packet, 1 = VLAN Table
+      End bit: 32
+      Name: pcpSel
+      Start bit: 31
+      Width: 2
+    - Default value: 0
+      Description: Pointer to the VLAN type. 0 = CVLAN, 1 = SVLAN, 2 = user defined
+        VLAN
+      End bit: 34
+      Name: typeSel
+      Start bit: 33
+      Width: 2
+    - Default value: 0
+      Description: New vid for VLAN operation push or swap
+      End bit: 46
+      Name: vid
+      Start bit: 35
+      Width: 12
+    - Default value: 0
+      Description: New pcp for VLAN operation push or swap
+      End bit: 49
+      Name: pcp
+      Start bit: 47
+      Width: 3
+    - Default value: 0
+      Description: New cfi/dei for VLAN operation push or swap
+      End bit: 50
+      Name: cfiDei
+      Start bit: 50
+      Width: 1
+    - Default value: 1
+      Description: If set, routing is allowed for this VLAN
+      End bit: 51
+      Name: allowRouting
+      Start bit: 51
+      Width: 1
+    Index: The packets assignedVLAN identifier (VID).
+    Number of entries: 4096
+    Start address: 209
+    Width: 52
