@@ -1,0 +1,50 @@
+C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/cla_var.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/cla_var.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cla_var
+
+Top level modules:
+	cla_var
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/testbench.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/testbench.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/de1soc_top.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/de1soc_top.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module de1soc_top
+
+Top level modules:
+	de1soc_top
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/us_csm_var.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/us_csm_var.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module us_csm_var
+
+Top level modules:
+	us_csm_var
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/hex_decoder.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/hex_decoder.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module hex_decoder
+
+Top level modules:
+	hex_decoder
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/reg_var.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/reg_var.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module reg_var
+
+Top level modules:
+	reg_var
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/fa.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/fa.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fa
+
+Top level modules:
+	fa
+
+} {} {}}

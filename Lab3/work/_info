@@ -1,0 +1,274 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Quartus_Prime_Lite_18.0.0.614
+vcomp_steep
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1549170376
+!i10b 1
+!s100 _HKi4P?`JOdZ>RV`Oz75Z0
+IN5TbkN<9X2LHjoMNSkJkQ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 !s105 lda_data_sv_unit
+S1
+Z4 dC:/Users/Charles/Desktop/ECE342_Labs/Lab3
+Z5 w1549169851
+Z6 8C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_data.sv
+Z7 FC:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_data.sv
+L0 225
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1549170375.000000
+Z10 !s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_data.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_data.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+vcomp_x0gtx1
+R0
+R1
+!i10b 1
+!s100 d8AkaI>1<SZLc_1coZzT30
+Ik2oULcVC4d]5_NK3bYT@J1
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 236
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vlda
+R0
+!s110 1549170481
+!i10b 1
+!s100 ZHL2[McVXdV`I^]K8;GBT1
+IX3ed:IiedbI_K7FC>Sh703
+R2
+!s105 lda_sv_unit
+S1
+R4
+w1549170461
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1549170480.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda.sv|
+!i113 1
+R12
+R13
+vlda_control
+R0
+!s110 1549170377
+!i10b 1
+!s100 J_0Wn=53H5<KC[99FL`X:3
+IlofdlO5eOPCZ50;dE;Tdb0
+R2
+!s105 lda_control_sv_unit
+S1
+R4
+w1549169909
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_control.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_control.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1549170376.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_control.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_control.sv|
+!i113 1
+R12
+R13
+vlda_data
+R0
+R1
+!i10b 1
+!s100 a<TbaGYz1@RKEboa=e;V50
+IW9fGNH47fUYiO=H>BkTZo3
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vparams_reg
+R0
+R1
+!i10b 1
+!s100 0Q^O=URg9LOO`VWKcPZ3C1
+IK<2Agz4QAlMeoW_>`cIhb1
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 247
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vvga_bmp
+R0
+!s110 1549149844
+!i10b 1
+!s100 4^=;fLV87emQ7Q`_XeZ1@1
+ImP_i8YLKZ4;l>nJ?H_<9c0
+R2
+!s105 vga_bmp_sv_unit
+S1
+R4
+w1546522318
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab3/vga_bmp.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab3/vga_bmp.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1549149844.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab3/vga_bmp.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab3/vga_bmp.sv|
+!i113 1
+R12
+R13
+vx0x1y0y1
+R0
+R1
+!i10b 1
+!s100 @DcBZFfjVMTi_dJh8SHTT2
+IZSZg4Hd13O>DWT<EcZNnz0
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 113
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vx1mx0
+R0
+R1
+!i10b 1
+!s100 6jEl?7=kbe1hBn;jB17Ld1
+IMniolE00:BLbPnocYc79z3
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 206
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vxy
+R0
+R1
+!i10b 1
+!s100 NWolAU[fHF46<B8l>0HR73
+IC<GYNzf4H05FS^C==ie2D2
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 285
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vy1my0
+R0
+R1
+!i10b 1
+!s100 4Tc[SkffaGU@L1C430Xdh3
+IKMAh1dG[3J]R5oP7fdA;]3
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 187
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13

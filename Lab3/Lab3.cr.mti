@@ -1,0 +1,36 @@
+C:/Users/Charles/Desktop/ECE342_Labs/Lab3/vga_bmp.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab3/vga_bmp.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_bmp
+
+Top level modules:
+	vga_bmp
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_control.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_control.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lda_control
+
+Top level modules:
+	lda_control
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lda
+
+Top level modules:
+	lda
+
+} {} {}} C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_data.sv {1 {vlog -work work -sv -stats=none C:/Users/Charles/Desktop/ECE342_Labs/Lab3/lda_data.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module lda_data
+-- Compiling module x0x1y0y1
+-- Compiling module y1my0
+-- Compiling module x1mx0
+-- Compiling module comp_steep
+-- Compiling module comp_x0gtx1
+-- Compiling module params_reg
+-- Compiling module xy
+
+Top level modules:
+	lda_data
+
+} {} {}}

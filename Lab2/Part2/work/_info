@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Quartus_Prime_Lite_18.0.0.614
+vcla_var
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1548553545
+!i10b 1
+!s100 @4;n1[9el]m1gLCJ9UDPh1
+I1FQSXJ:H4[`:ab5mR97^T1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 cla_var_sv_unit
+S1
+Z3 dC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2
+w1548553535
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/cla_var.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/cla_var.sv
+L0 2
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1548553545.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/cla_var.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/cla_var.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vde1soc_top
+R0
+R1
+!i10b 1
+!s100 QV26OS8AIPQfJ3FT95oaA3
+IYU9XUU<f09Y7YjMTD0GEY1
+R2
+!s105 de1soc_top_sv_unit
+S1
+R3
+Z8 w1546522318
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/de1soc_top.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/de1soc_top.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/de1soc_top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/de1soc_top.sv|
+!i113 1
+R6
+R7
+vfa
+R0
+Z9 !s110 1548553546
+!i10b 1
+!s100 81U]hCeNTBMc3NzSgH1;X2
+I6f8JJZi:Y>[iD0fI]4@aa2
+R2
+!s105 fa_sv_unit
+S1
+R3
+w1548535882
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/fa.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/fa.sv
+L0 2
+R4
+r1
+!s85 0
+31
+Z10 !s108 1548553546.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/fa.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/fa.sv|
+!i113 1
+R6
+R7
+vhex_decoder
+R0
+R9
+!i10b 1
+!s100 G_2`OH?C3N_@:BW]WmV<j2
+IOJ^Hn]OB9W8@H1^Fd@BIO1
+R2
+!s105 hex_decoder_sv_unit
+S1
+R3
+R8
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/hex_decoder.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/hex_decoder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/hex_decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/hex_decoder.sv|
+!i113 1
+R6
+R7
+vreg_var
+R0
+!s110 1548553547
+!i10b 1
+!s100 5;N5Yna5QORHS;6CFjUfo1
+I<kjh:Nz`Y]36GhS=UM_^U2
+R2
+!s105 reg_var_sv_unit
+S1
+R3
+w1548535502
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/reg_var.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/reg_var.sv
+L0 2
+R4
+r1
+!s85 0
+31
+Z11 !s108 1548553547.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/reg_var.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/reg_var.sv|
+!i113 1
+R6
+R7
+vtestbench
+R0
+!s110 1548553548
+!i10b 1
+!s100 N9ok7`c>:fgi8jfT?f?_>3
+IFD5`XZh_=;<FkBZhMg:io2
+R2
+!s105 testbench_sv_unit
+S1
+R3
+w1548548754
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/testbench.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/testbench.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/testbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/testbench.sv|
+!i113 1
+R6
+R7
+vus_csm_var
+R0
+!s110 1548553544
+!i10b 1
+!s100 LdDg=Ma0^E`VI:dGADbC@3
+IV0fBbT?6BEi5UB7`O`n1R1
+R2
+!s105 us_csm_var_sv_unit
+S1
+R3
+w1548552562
+8C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/us_csm_var.sv
+FC:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/us_csm_var.sv
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1548553544.000000
+!s107 C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/us_csm_var.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Charles/Desktop/ECE342_Labs/Lab2/Part2/us_csm_var.sv|
+!i113 1
+R6
+R7
